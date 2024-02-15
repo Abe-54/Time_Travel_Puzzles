@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public bool isFacingRight = true;
     public float speed = 10.0f;
 
+    // public Transform pastSpawnPoint;
+    // public Transform presentSpawnPoint;
+
     public float jumpForce = 10.0f;
     public bool isGrounded = false;
     public Transform groundCheck;
@@ -18,13 +21,24 @@ public class PlayerController : MonoBehaviour
     public CinemachineVirtualCamera pastVCam;
     public bool isPast = false;
 
+    public GameObject item;
+    public GameObject pastPlayer;
+    public GameObject presentPlayer;
+
     private float horizontalInput;
     private Rigidbody2D rb;
+    private UIManager uiManager;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        uiManager = FindObjectOfType<UIManager>();
+
+        presentVCam.Priority = 1;
+        pastVCam.Priority = 0;
+
+        pastPlayer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,7 +56,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             isPast = !isPast;
-            SwapCamera();
+            StartCoroutine(SwapTimePeriod());
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (item != null)
+            {
+                pickUpItem(item);
+                Destroy(item);
+            }
         }
     }
 
@@ -103,6 +126,30 @@ public class PlayerController : MonoBehaviour
         {
             presentVCam.Priority = 1;
             pastVCam.Priority = 0;
+        }
+    }
+
+    IEnumerator SwapTimePeriod()
+    {
+        pastPlayer.SetActive(isPast);
+        presentPlayer.SetActive(!isPast);
+        SwapCamera();
+
+
+        yield return new WaitForSeconds(0.1f);
+
+    }
+
+    public void pickUpItem(GameObject itemToPickUp)
+    {
+        uiManager.UpdateInventory(itemToPickUp);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Pick-Up"))
+        {
+            item = other.gameObject;
         }
     }
 }
