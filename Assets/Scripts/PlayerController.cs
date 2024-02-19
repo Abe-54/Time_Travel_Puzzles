@@ -5,107 +5,174 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool isFacingRight = true;
+    [Header("Movement")]
+    public float acceleration = 10.0f;
+    [Range(0f, 1f)]
+    public float groundDecay = 5.0f;
     public float speed = 10.0f;
+    public bool canMove = true;
 
-    // public Transform pastSpawnPoint;
-    // public Transform presentSpawnPoint;
-
+    [Space(10)]
+    [Header("Jumping")]
     public float jumpForce = 10.0f;
+
+    [Header("Ground Check")]
     public bool isGrounded = false;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundMask;
 
-    public CinemachineVirtualCamera presentVCam;
-    public CinemachineVirtualCamera pastVCam;
-    public bool isPast = false;
+    [Space(10)]
+    [Header("Inventory")]
+    private GameObject itemToPickUp;
+    public GameObject carryingItem;
+    public Transform itemHoldPosition;
 
-    public GameObject item;
-    public GameObject pastPlayer;
-    public GameObject presentPlayer;
+    [Header("Debugging")]
+    public bool stopInAir = false;
 
-    private float horizontalInput;
-    private Rigidbody2D rb;
+    private float xInput;
+    private Rigidbody2D body;
     private UIManager uiManager;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
+        gameManager = FindObjectOfType<GameManager>();
 
-        presentVCam.Priority = 1;
-        pastVCam.Priority = 0;
-
-        pastPlayer.SetActive(false);
+        gameManager.currentTimePeriod = GameManager.TimePeriod.Present;
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
-
-        Flip();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!canMove)
         {
-            Jump();
+            return;
         }
+
+        CheckInput();
+        HandleJump();
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            isPast = !isPast;
-            StartCoroutine(SwapTimePeriod());
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (item != null)
+            if (itemToPickUp != null && itemToPickUp.CompareTag("Tree"))
             {
-                pickUpItem(item);
-                Destroy(item);
+                InteractWithTree(itemToPickUp);
+            }
+            else if (carryingItem != null)
+            {
+                DropItem();
+            }
+            else if (itemToPickUp != null)
+            {
+                pickUpItem(itemToPickUp);
             }
         }
     }
 
     void FixedUpdate()
     {
-        Move(horizontalInput);
+        if (!canMove)
+        {
+            return;
+        }
 
+        CheckGround();
+        Move();
+        ApplyFriction();
     }
 
-    public void Move(float moveInput)
+    void CheckInput()
     {
-        if (Mathf.Abs(moveInput) > 0.01f) // Player is moving
+        xInput = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            gameManager.SwapTimePeriod();
+        }
+    }
+
+    void CheckGround()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
+    }
+
+    void InteractWithTree(GameObject tree)
+    {
+        gameManager.knockedTree.SetActive(true);
+        tree.SetActive(false);
+    }
+
+    public void Move()
+    {
+        if (Mathf.Abs(xInput) > 0f) // Player is moving
+        {
+
+            float increment = xInput * acceleration;
+            float newSpeed = Mathf.Clamp(body.velocity.x + increment, -speed, speed);
+
             // Directly set the velocity for immediate response
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        }
-        else // Player has released movement controls
-        {
-            // Immediately stop the player by setting horizontal velocity to zero
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-    }
+            body.velocity = new Vector2(newSpeed, body.velocity.y);
 
-
-    void Jump()
-    {
-        if (isGrounded)
+            float direction = Mathf.Sign(xInput);
+            transform.localScale = new Vector3(direction, 1, 1);
+        }
+        else if (stopInAir && !isGrounded) // Player is not moving and in the air
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            body.velocity = new Vector2(0, body.velocity.y);
         }
     }
 
-    void Flip()
+
+    void HandleJump()
     {
-        if (isFacingRight && horizontalInput < 0 || !isFacingRight && horizontalInput > 0)
+        if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            isFacingRight = !isFacingRight;
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
+            body.velocity = new Vector2(body.velocity.x, jumpForce);
+        }
+    }
+
+    void ApplyFriction()
+    {
+        if (isGrounded && xInput == 0 && body.velocity.y <= 0f)
+        {
+            body.velocity *= groundDecay;
+        }
+    }
+
+    public void pickUpItem(GameObject itemToPickUp)
+    {
+        if (itemToPickUp != null)
+        {
+            // Instantiate or directly assign the item to the player
+            carryingItem = Instantiate(itemToPickUp, itemHoldPosition.position, Quaternion.identity, itemHoldPosition);
+            carryingItem.GetComponent<Rigidbody2D>().isKinematic = true;
+            carryingItem.GetComponent<Collider2D>().enabled = false;
+
+            // Optionally adjust the item's properties or disable it in the scene
+            itemToPickUp.SetActive(false); // If you're just hiding the interactable and not using the instantiated item
+
+            uiManager.UpdateInventory(carryingItem); // Update UI to show the picked-up item
+        }
+    }
+
+    public void DropItem()
+    {
+        // Drop the item
+        if (carryingItem != null)
+        {
+            // Logic to drop the item in the world
+            carryingItem.transform.SetParent(null); // Detach the item from the player
+            carryingItem.GetComponent<Rigidbody2D>().isKinematic = false;
+            carryingItem.GetComponent<Collider2D>().enabled = true;
+            // carryingItem.transform.position = transform.position + transform.right; // Adjust as necessary
+
+            uiManager.ClearInventory(); // Update UI to remove the item
+            carryingItem = null; // Clear the reference
         }
     }
 
@@ -115,41 +182,35 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
-    void SwapCamera()
-    {
-        if (isPast)
-        {
-            presentVCam.Priority = 0;
-            pastVCam.Priority = 1;
-        }
-        else
-        {
-            presentVCam.Priority = 1;
-            pastVCam.Priority = 0;
-        }
-    }
-
-    IEnumerator SwapTimePeriod()
-    {
-        pastPlayer.SetActive(isPast);
-        presentPlayer.SetActive(!isPast);
-        SwapCamera();
-
-
-        yield return new WaitForSeconds(0.1f);
-
-    }
-
-    public void pickUpItem(GameObject itemToPickUp)
-    {
-        uiManager.UpdateInventory(itemToPickUp);
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Pick-Up"))
+        if (other.gameObject.CompareTag("Interactable"))
         {
-            item = other.gameObject;
+            uiManager.ShowInteractText();
+
+            if (other.gameObject.GetComponent<BagController>() != null)
+            {
+                itemToPickUp = other.gameObject.GetComponent<BagController>().itemToDispense;
+            }
+        }
+
+        if (other.gameObject.CompareTag("Tree"))
+        {
+            uiManager.ShowInteractText();
+            itemToPickUp = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Interactable"))
+        {
+            uiManager.HideInteractText();
+
+            if (other.gameObject.GetComponent<BagController>() != null)
+            {
+                itemToPickUp = null;
+            }
         }
     }
 }

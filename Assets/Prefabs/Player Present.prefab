@@ -317,6 +317,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6069273242436625617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2158525860020190904}
+  m_Layer: 0
+  m_Name: Pickup Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2158525860020190904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069273242436625617}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5719558125606810086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8457749415134500401
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +362,7 @@ GameObject:
   - component: {fileID: 1626338130082945168}
   m_Layer: 0
   m_Name: Player Present
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,13 +375,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8457749415134500401}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.2, y: -8.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7471569279271443474}
   - {fileID: 6065005628599221312}
+  - {fileID: 2158525860020190904}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &5051195481101965547
@@ -437,15 +469,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5da9108832cf06469f3a9e86aec0964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFacingRight: 1
+  acceleration: 5
+  groundDecay: 0.5
   speed: 15
+  canMove: 1
   jumpForce: 20
   isGrounded: 0
   groundCheck: {fileID: 6065005628599221312}
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.1
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  presentVCam: {fileID: 0}
-  pastVCam: {fileID: 0}
-  isPast: 0
+  carryingItem: {fileID: 0}
+  itemHoldPosition: {fileID: 0}
+  stopInAir: 1

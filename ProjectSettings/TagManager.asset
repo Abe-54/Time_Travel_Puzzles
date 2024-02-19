@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pick-Up
+  - Interactable
+  - Seed
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -12,7 +15,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Items
   - 
   - 
   - 
