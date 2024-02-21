@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     void InteractWithTree(GameObject tree)
     {
+        uiManager.HideInteractText();
         gameManager.knockedTree.SetActive(true);
         tree.SetActive(false);
     }
@@ -153,8 +154,7 @@ public class PlayerController : MonoBehaviour
             carryingItem.GetComponent<Rigidbody2D>().isKinematic = true;
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
-            // Optionally adjust the item's properties or disable it in the scene
-            itemToPickUp.SetActive(false); // If you're just hiding the interactable and not using the instantiated item
+            // carryingItem.SetActive(false);
 
             uiManager.UpdateInventory(carryingItem); // Update UI to show the picked-up item
         }

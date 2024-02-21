@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'Q' to Interact
+  m_text: Press 'E' to Interact
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4019,6 +4019,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 569574175662905449, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1626338130082945168, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
       propertyPath: item
       value: 
@@ -4028,12 +4032,24 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1626338130082945168, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
+      propertyPath: jumpForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626338130082945168, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
       propertyPath: itemHoldPosition
       value: 
       objectReference: {fileID: 56579019}
     - target: {fileID: 1626338130082945168, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
       propertyPath: groundCheckRadius
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693300741887721559, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618672613742216831, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5719558125606810086, guid: a54487138bd2e4cacb34a71129914de3, type: 3}
       propertyPath: m_LocalPosition.x
