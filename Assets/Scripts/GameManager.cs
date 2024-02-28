@@ -52,8 +52,9 @@ public class GameManager : MonoBehaviour
     {
         currentTimePeriod = (currentTimePeriod == TimePeriod.Past) ? TimePeriod.Present : TimePeriod.Past;
 
-        // Freeze Everything for a moment to swap environments
+        Vector2 playerVelocityBeforeSwap = player.GetComponent<Rigidbody2D>().velocity;
 
+        // Freeze Everything for a moment to swap environments
         FreezeEverything();
 
         uiManager.TriggerTransition(1.0f, () =>
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
             pastEnvironment.SetActive(currentTimePeriod == TimePeriod.Past);
             presentEnvironment.SetActive(currentTimePeriod == TimePeriod.Present);
 
-            player.transform.position = (currentTimePeriod == TimePeriod.Past) ? pastSpawnPosition.position : presentSpawnPosition.position;
+            // player.transform.position = (currentTimePeriod == TimePeriod.Past) ? pastSpawnPosition.position : presentSpawnPosition.position;
 
             if (currentTimePeriod == TimePeriod.Past)
             {
@@ -73,6 +74,8 @@ public class GameManager : MonoBehaviour
                 pastCamera.Priority = 10;
                 presentCamera.Priority = 11; // Higher priority takes over
             }
+
+            player.GetComponent<Rigidbody2D>().velocity = playerVelocityBeforeSwap;
 
             UnfreezeEverything();
         });

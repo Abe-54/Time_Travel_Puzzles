@@ -57,6 +57,11 @@ public class PlayerController : MonoBehaviour
         CheckInput();
         HandleJump();
 
+        if (Input.GetKeyDown(KeyCode.E) && itemToPickUp != null && carryingItem == null)
+        {
+            pickupItem(itemToPickUp); // Pick up an item from the ground
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (itemToPickUp != null && itemToPickUp.CompareTag("Tree"))
@@ -69,7 +74,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (itemToPickUp != null)
             {
-                pickUpItem(itemToPickUp);
+                takeItem(itemToPickUp);
             }
         }
     }
@@ -145,7 +150,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void pickUpItem(GameObject itemToPickUp)
+    public void takeItem(GameObject itemToPickUp)
     {
         if (itemToPickUp != null)
         {
@@ -154,9 +159,21 @@ public class PlayerController : MonoBehaviour
             carryingItem.GetComponent<Rigidbody2D>().isKinematic = true;
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
-            // carryingItem.SetActive(false);
-
             uiManager.UpdateInventory(carryingItem); // Update UI to show the picked-up item
+        }
+    }
+
+    public void pickupItem(GameObject itemFromGround)
+    {
+        if (itemFromGround != null && carryingItem == null) // Ensure the player isn't already carrying an item
+        {
+            carryingItem = itemFromGround; // Assign the existing item to be the carried item
+            carryingItem.transform.position = itemHoldPosition.position; // Move it to the hold position
+            carryingItem.transform.SetParent(itemHoldPosition); // Parent it to the hold position
+            carryingItem.GetComponent<Rigidbody2D>().isKinematic = true; // Make it kinematic to prevent physics interactions while carried
+            carryingItem.GetComponent<Collider2D>().enabled = false; // Optionally disable the collider
+
+            uiManager.UpdateInventory(carryingItem); // Update the UI to show the picked-up item
         }
     }
 
@@ -184,7 +201,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Interactable"))
+        if (other.gameObject.CompareTag("Interactable") && carryingItem == null)
         {
             uiManager.ShowInteractText();
 
@@ -192,6 +209,11 @@ public class PlayerController : MonoBehaviour
             {
                 itemToPickUp = other.gameObject.GetComponent<BagController>().itemToDispense;
             }
+        }
+
+        if (other.gameObject.GetComponent<Seed>() != null && carryingItem == null)
+        {
+            itemToPickUp = other.gameObject;
         }
 
         if (other.gameObject.CompareTag("Tree"))
@@ -211,6 +233,12 @@ public class PlayerController : MonoBehaviour
             {
                 itemToPickUp = null;
             }
+        }
+
+        if (other.gameObject == itemToPickUp)
+        {
+            itemToPickUp = null;
+            uiManager.HideInteractText();
         }
     }
 }
