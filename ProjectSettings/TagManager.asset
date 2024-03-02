@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Seed
   - Tree
+  - Container
   layers:
   - Default
   - TransparentFX

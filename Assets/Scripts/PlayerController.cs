@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
     [Range(0f, 1f)]
     public float groundDecay = 5.0f;
     public float speed = 10.0f;
+    public float maxSpeed = 50.0f;
     public bool canMove = true;
+    public bool isFacingRight = true;
 
     [Space(10)]
     [Header("Jumping")]
     public float jumpForce = 10.0f;
 
+    [Space(10)]
     [Header("Ground Check")]
     public bool isGrounded = false;
     public Transform groundCheck;
@@ -23,8 +26,25 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     [Space(10)]
+    [Header("Pickup Check")]
+    public bool isNearItem = false;
+    public Transform pickupCheck;
+    public float pickupCheckRadius;
+    public LayerMask pickupMask;
+
+    [Space(10)]
+    [Header("Throwing")]
+    public GameObject throwPowerIndicator;
+    public bool isChargingThrow = false;
+    public float throwChargeTime = 0f;
+    public float maxThrowChargeTime = 2f; // Max time to reach full charge
+    public float minThrowForce = 5f; // Minimum throw force
+    public float maxThrowForce = 20f; // Maximum throw force based on max charge time
+
+    [Space(10)]
     [Header("Inventory")]
-    private GameObject itemToPickUp;
+    public GameObject itemToPickUp;
+    public GameObject containerItem;
     public GameObject carryingItem;
     public Transform itemHoldPosition;
 
@@ -43,6 +63,9 @@ public class PlayerController : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
         gameManager = FindObjectOfType<GameManager>();
 
+        throwPowerIndicator.SetActive(false);
+        throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
+
         gameManager.currentTimePeriod = GameManager.TimePeriod.Present;
     }
 
@@ -57,25 +80,55 @@ public class PlayerController : MonoBehaviour
         CheckInput();
         HandleJump();
 
-        if (Input.GetKeyDown(KeyCode.E) && itemToPickUp != null && carryingItem == null)
-        {
-            pickupItem(itemToPickUp); // Pick up an item from the ground
-        }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (itemToPickUp != null && itemToPickUp.CompareTag("Tree"))
+            if (containerItem != null)
             {
-                InteractWithTree(itemToPickUp);
+                // Interact with the container to take the item it's dispensing
+                BagController bagController = containerItem.GetComponent<BagController>();
+                if (bagController != null && carryingItem == null)
+                {
+                    takeItem(bagController.itemToDispense);
+                }
+            }
+            else if (itemToPickUp != null && carryingItem == null)
+            {
+                // Pickup item from the ground
+                pickupItem(itemToPickUp);
             }
             else if (carryingItem != null)
             {
+                // Drop the currently carried item
                 DropItem();
             }
-            else if (itemToPickUp != null)
-            {
-                takeItem(itemToPickUp);
-            }
+        }
+
+        // Start charging the throw when carrying an item and the throw button is pressed
+        if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
+        {
+            Debug.Log("Start charging throw: " + throwChargeTime);
+            throwPowerIndicator.SetActive(true);
+            isChargingThrow = true;
+            throwChargeTime = 0f; // Reset charge time
+        }
+
+        // While charging, increment the charge time
+        if (isChargingThrow && Input.GetKey(KeyCode.F))
+        {
+            Debug.Log("Charging throw: " + throwChargeTime);
+            throwPowerIndicator.transform.localScale = new Vector3(throwChargeTime / maxThrowChargeTime, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z);
+            throwChargeTime += Time.deltaTime;
+            throwChargeTime = Mathf.Clamp(throwChargeTime, 0, maxThrowChargeTime);
+        }
+
+        // Release the button to throw the item
+        if (Input.GetKeyUp(KeyCode.F) && isChargingThrow)
+        {
+            Debug.Log("Throwing item: " + throwChargeTime);
+            isChargingThrow = false;
+            throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
+            throwPowerIndicator.SetActive(false);
+            ThrowCarryingItem();
         }
     }
 
@@ -87,7 +140,8 @@ public class PlayerController : MonoBehaviour
         }
 
         CheckGround();
-        Move();
+        CheckNearItem();
+        Move(xInput);
         ApplyFriction();
     }
 
@@ -95,15 +149,77 @@ public class PlayerController : MonoBehaviour
     {
         xInput = Input.GetAxisRaw("Horizontal");
 
+        Debug.Log("xInput: " + xInput);
+
+        if (xInput > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+        else if (xInput < 0 && isFacingRight)
+        {
+            Flip();
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             gameManager.SwapTimePeriod();
         }
     }
 
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
     void CheckGround()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
+    }
+
+    void CheckNearItem()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(pickupCheck.position, pickupCheckRadius, pickupMask);
+        GameObject closestPickupable = null;
+        GameObject closestContainer = null;
+        float closestPickupableDistance = float.MaxValue;
+        float closestContainerDistance = float.MaxValue;
+
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("Seed"))
+            {
+                float distance = Vector2.Distance(hit.transform.position, pickupCheck.position);
+                if (distance < closestPickupableDistance)
+                {
+                    closestPickupable = hit.gameObject;
+                    closestPickupableDistance = distance;
+                }
+            }
+            else if (hit.CompareTag("Container"))
+            {
+                float distance = Vector2.Distance(hit.transform.position, pickupCheck.position);
+                if (distance < closestContainerDistance)
+                {
+                    closestContainer = hit.gameObject;
+                    closestContainerDistance = distance;
+                }
+            }
+        }
+
+        // Determine which item/container is closer and should be interacted with
+        if (closestContainerDistance < closestPickupableDistance)
+        {
+            containerItem = closestContainer;
+            itemToPickUp = null; // Ensure that itemToPickUp is cleared if a container is closer
+        }
+        else
+        {
+            itemToPickUp = closestPickupable;
+            containerItem = null; // Clear the container reference if a pickupable item is closer
+        }
+
+        isNearItem = itemToPickUp != null || containerItem != null;
     }
 
     void InteractWithTree(GameObject tree)
@@ -113,21 +229,46 @@ public class PlayerController : MonoBehaviour
         tree.SetActive(false);
     }
 
-    public void Move()
+    void ThrowCarryingItem()
     {
-        if (Mathf.Abs(xInput) > 0f) // Player is moving
+        if (carryingItem != null)
         {
+            // Calculate the throw force based on the charge time
+            float throwForce = Mathf.Lerp(minThrowForce, maxThrowForce, throwChargeTime / maxThrowChargeTime);
 
-            float increment = xInput * acceleration;
-            float newSpeed = Mathf.Clamp(body.velocity.x + increment, -speed, speed);
+            // Throw the item
+            Vector2 throwDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
-            // Directly set the velocity for immediate response
-            body.velocity = new Vector2(newSpeed, body.velocity.y);
+            // Apply the force to the carried item
+            Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
+            itemRb.isKinematic = false;
+            itemRb.transform.SetParent(null); // Detach from the player
+            itemRb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            carryingItem.GetComponent<Collider2D>().enabled = true;
 
-            float direction = Mathf.Sign(xInput);
-            transform.localScale = new Vector3(direction, 1, 1);
+            uiManager.ClearInventory(); // Update UI to remove the item
+            carryingItem = null; // Clear the reference
         }
-        else if (stopInAir && !isGrounded) // Player is not moving and in the air
+
+        throwChargeTime = 0f;
+    }
+
+    public void Move(float horizontal)
+    {
+        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+
+        if ((horizontal > 0 && !isFacingRight) || (horizontal < 0 && isFacingRight))
+        {
+            Flip();
+        }
+
+        if (Mathf.Abs(body.velocity.x) > maxSpeed)
+        {
+            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxSpeed, body.velocity.y);
+        }
+
+
+        if (stopInAir && !isGrounded) // Player is not moving and in the air
         {
             body.velocity = new Vector2(0, body.velocity.y);
         }
@@ -150,30 +291,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void takeItem(GameObject itemToPickUp)
+    public void takeItem(GameObject itemToTake)
     {
-        if (itemToPickUp != null)
+        if (itemToTake != null)
         {
-            // Instantiate or directly assign the item to the player
-            carryingItem = Instantiate(itemToPickUp, itemHoldPosition.position, Quaternion.identity, itemHoldPosition);
+            carryingItem = Instantiate(itemToTake, itemHoldPosition.position, Quaternion.identity, itemHoldPosition);
             carryingItem.GetComponent<Rigidbody2D>().isKinematic = true;
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
-            uiManager.UpdateInventory(carryingItem); // Update UI to show the picked-up item
+            uiManager.UpdateInventory(carryingItem); // Assume this method updates the UI accordingly
         }
     }
 
     public void pickupItem(GameObject itemFromGround)
     {
-        if (itemFromGround != null && carryingItem == null) // Ensure the player isn't already carrying an item
+        if (itemFromGround != null)
         {
-            carryingItem = itemFromGround; // Assign the existing item to be the carried item
-            carryingItem.transform.position = itemHoldPosition.position; // Move it to the hold position
-            carryingItem.transform.SetParent(itemHoldPosition); // Parent it to the hold position
-            carryingItem.GetComponent<Rigidbody2D>().isKinematic = true; // Make it kinematic to prevent physics interactions while carried
-            carryingItem.GetComponent<Collider2D>().enabled = false; // Optionally disable the collider
+            carryingItem = itemFromGround;
+            itemFromGround.transform.position = itemHoldPosition.position;
+            itemFromGround.transform.SetParent(itemHoldPosition);
+            itemFromGround.GetComponent<Rigidbody2D>().isKinematic = true;
+            if (itemFromGround.GetComponent<Collider2D>() != null)
+            {
+                itemFromGround.GetComponent<Collider2D>().enabled = false;
+            }
 
-            uiManager.UpdateInventory(carryingItem); // Update the UI to show the picked-up item
+            uiManager.UpdateInventory(carryingItem); // Update UI to show the picked-up item
         }
     }
 
@@ -204,41 +347,34 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Interactable") && carryingItem == null)
         {
             uiManager.ShowInteractText();
-
-            if (other.gameObject.GetComponent<BagController>() != null)
-            {
-                itemToPickUp = other.gameObject.GetComponent<BagController>().itemToDispense;
-            }
-        }
-
-        if (other.gameObject.GetComponent<Seed>() != null && carryingItem == null)
-        {
-            itemToPickUp = other.gameObject;
         }
 
         if (other.gameObject.CompareTag("Tree"))
         {
             uiManager.ShowInteractText();
-            itemToPickUp = other.gameObject;
+            // itemToPickUp = other.gameObject;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            uiManager.HideInteractText();
-
-            if (other.gameObject.GetComponent<BagController>() != null)
-            {
-                itemToPickUp = null;
-            }
-        }
-
         if (other.gameObject == itemToPickUp)
         {
-            itemToPickUp = null;
-            uiManager.HideInteractText();
+            itemToPickUp = null; // Clear the reference to the item
+            uiManager.HideInteractText(); // Optionally, hide interaction UI hints
+        }
+
+        // Check if the player is moving away from a container
+        if (other.gameObject == containerItem)
+        {
+            containerItem = null; // Clear the reference to the container
+            uiManager.HideInteractText(); // Optionally, hide interaction UI hints
+        }
+
+        // If the player moves away from any interactable object and there's no item or container nearby
+        if (itemToPickUp == null && containerItem == null)
+        {
+            isNearItem = false; // Update the flag indicating proximity to an interactable item or container
         }
     }
 }

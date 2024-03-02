@@ -827,7 +827,7 @@ Transform:
   m_GameObject: {fileID: 416318425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2149773, y: -3, z: -10}
+  m_LocalPosition: {x: -4.2176075, y: -3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 1125978844}
   m_Layer: 0
   m_Name: Seed Bag
-  m_TagString: Interactable
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,6 +5,9 @@ using UnityEngine;
 public class DirtController : MonoBehaviour
 {
     public bool hasSeed = false;
+
+    public Seed seed;
+
     public GameObject seedBag;
 
     private SpriteRenderer spriteRenderer;
@@ -22,7 +25,14 @@ public class DirtController : MonoBehaviour
     {
         if (hasSeed)
         {
-            spriteRenderer.color = new Color(0, 1, 0, 1);
+            if (seed.seedData.seedName == "Tree")
+            {
+                spriteRenderer.color = new Color(0, 1, 0, 1);
+            }
+            else if (seed.seedData.seedName == "Vine")
+            {
+                spriteRenderer.color = new Color(1, 0, 0, 1);
+            }
         }
     }
 
@@ -31,6 +41,7 @@ public class DirtController : MonoBehaviour
         if (other.gameObject.CompareTag("Seed"))
         {
             Debug.Log("Seed has been planted");
+            seed = other.gameObject.GetComponent<Seed>();
             hasSeed = true;
             gameManager.tree.SetActive(true);
             seedBag.SetActive(false);
