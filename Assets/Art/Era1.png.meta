@@ -153,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 122
-        y: 393
+        y: 681
         width: 39
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,11 +174,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 219
-        y: 395
+        y: 683
         width: 42
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,11 +195,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 313
-        y: 395
+        y: 683
         width: 42
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,11 +216,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 415
-        y: 395
+        y: 683
         width: 30
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,11 +237,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 511
-        y: 395
+        y: 683
         width: 30
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,57 +254,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Era1_14
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 299
-        width: 39
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a897534534d1b241a45b14db45f352d
-      internalID: 745803498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Era1_15
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 299
-        width: 39
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56d7322befcb69146b777115e06c4643
-      internalID: -135540689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Era1_16
       rect:
         serializedVersion: 2
-        x: 223
-        y: 299
+        x: 31
+        y: 587
         width: 30
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +278,12 @@ TextureImporter:
       name: Era1_17
       rect:
         serializedVersion: 2
-        x: 315
-        y: 299
+        x: 123
+        y: 587
         width: 40
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,12 +299,12 @@ TextureImporter:
       name: Era1_18
       rect:
         serializedVersion: 2
-        x: 411
-        y: 299
+        x: 219
+        y: 587
         width: 42
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,12 +320,12 @@ TextureImporter:
       name: Era1_19
       rect:
         serializedVersion: 2
-        x: 509
-        y: 299
+        x: 317
+        y: 587
         width: 42
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,12 +341,12 @@ TextureImporter:
       name: Era1_20
       rect:
         serializedVersion: 2
-        x: 35
-        y: 203
+        x: 419
+        y: 587
         width: 30
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,12 +362,12 @@ TextureImporter:
       name: Era1_21
       rect:
         serializedVersion: 2
-        x: 131
-        y: 203
+        x: 515
+        y: 587
         width: 30
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,12 +383,12 @@ TextureImporter:
       name: Era1_22
       rect:
         serializedVersion: 2
-        x: 219
-        y: 203
+        x: 603
+        y: 587
         width: 39
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,12 +404,12 @@ TextureImporter:
       name: Era1_23
       rect:
         serializedVersion: 2
-        x: 320
-        y: 203
+        x: 704
+        y: 587
         width: 39
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,12 +425,12 @@ TextureImporter:
       name: Era1_24
       rect:
         serializedVersion: 2
-        x: 419
-        y: 203
+        x: 35
+        y: 491
         width: 30
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,12 +446,12 @@ TextureImporter:
       name: Era1_25
       rect:
         serializedVersion: 2
-        x: 509
-        y: 203
+        x: 125
+        y: 491
         width: 40
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,12 +467,12 @@ TextureImporter:
       name: Era1_26
       rect:
         serializedVersion: 2
-        x: 34
-        y: 107
+        x: 226
+        y: 491
         width: 35
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,12 +488,12 @@ TextureImporter:
       name: Era1_27
       rect:
         serializedVersion: 2
-        x: 120
-        y: 107
+        x: 312
+        y: 491
         width: 43
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,12 +509,12 @@ TextureImporter:
       name: Era1_28
       rect:
         serializedVersion: 2
-        x: 219
-        y: 123
+        x: 411
+        y: 507
         width: 36
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,12 +530,12 @@ TextureImporter:
       name: Era1_29
       rect:
         serializedVersion: 2
-        x: 307
-        y: 107
+        x: 499
+        y: 491
         width: 45
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,12 +551,12 @@ TextureImporter:
       name: Era1_30
       rect:
         serializedVersion: 2
-        x: 411
-        y: 107
+        x: 603
+        y: 491
         width: 35
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,12 +572,12 @@ TextureImporter:
       name: Era1_31
       rect:
         serializedVersion: 2
-        x: 509
-        y: 107
+        x: 701
+        y: 491
         width: 43
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -636,11 +594,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 27
+        y: 411
         width: 36
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -657,11 +615,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 11
+        y: 395
         width: 45
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -678,11 +636,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 223
-        y: 9
+        y: 393
         width: 34
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -699,11 +657,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 319
-        y: 9
+        y: 393
         width: 34
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -720,11 +678,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 415
-        y: 9
+        y: 393
         width: 37
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -741,11 +699,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 511
-        y: 9
+        y: 393
         width: 34
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -753,6 +711,594 @@ TextureImporter:
       bones: []
       spriteID: e246751f2ba69f34692d8111b2254224
       internalID: 1148538161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_9
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 683
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544ca6753247bb34c8848e4ddb209742
+      internalID: 1752284826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_10
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 683
+        width: 39
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3961b82405abe74782718f8e23a765f
+      internalID: -1819504509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_38
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 393
+        width: 32
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b436dc82101f13a408b0e75299f262ff
+      internalID: 442888400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_39
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 393
+        width: 32
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fffe21404dba99448568e672a92eab0
+      internalID: -1930759743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_40
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 299
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c815714920a92ec46a16dbe125648075
+      internalID: 1811728114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_41
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 299
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36eba542a1d05254495aa94c37d05f34
+      internalID: 1736796922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_42
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 299
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8039009b87a158c4895389d647f2060f
+      internalID: -803792676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_43
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 299
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6914123c5237c784c8e69610719b54b6
+      internalID: 1156171328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_44
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 299
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687f2db958a8a404288e2926b20c4c9d
+      internalID: -633243198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_45
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 299
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4da2fcfefe409b40834f3f5ae908e13
+      internalID: 394863539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_46
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 299
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263a7c34363a3974fa33519c950dd0a0
+      internalID: 2035420091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_47
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 299
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7f2b653c102c84492a565ecbff7f7a
+      internalID: -1389540398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 203
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdce8d6989339f47aa1dccaf0b94e8f
+      internalID: 1369832104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 203
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba266e3f2eae5844a1d64fdf8b41797
+      internalID: -124680483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_50
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 203
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a698fd96cdb9bc469c902884e73b8d9
+      internalID: -1240760759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_51
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 203
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ef4bd738c7e664bafc2b3b19655a31
+      internalID: 376388431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_52
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 203
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ca9ecce7fb02b4c872be7fa593f7ce
+      internalID: -1079136356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_53
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 203
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeaf9f16ce7a2964b85a44bd3a2913bb
+      internalID: -1500952262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_54
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 203
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bdc0faf15d25d4bacaf8a8bedc7b07
+      internalID: -768113484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_55
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 203
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c64873bec6942f4885221120cc03836
+      internalID: 1816093998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_56
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 107
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95dbc46c58c704a4489095e3fa581c9a
+      internalID: 109368219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_57
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 107
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba05f8bec7bd2941a1a2b111904bbfa
+      internalID: -2122803624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_58
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 123
+        width: 31
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36dc11839292e84280a7020a876bb10
+      internalID: -1137958608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_59
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 107
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bdc61bbe23b3644a593e2ce93483af
+      internalID: -3649886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_60
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 107
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3db6e31d297a1541badc2d284b2449f
+      internalID: -107572969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_61
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 107
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48fa2616875f5d4e951752fd9e96e8b
+      internalID: 2011894478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_62
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 123
+        width: 31
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90660357e4e117f478a565aaee584b0d
+      internalID: -1363527690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Era1_63
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 107
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48709972f4422634eab85f78982b8a58
+      internalID: -1431508652
       vertices: []
       indices: 
       edges: []
@@ -801,9 +1347,36 @@ TextureImporter:
       Era1_36: -51641755
       Era1_37: 1148538161
       Era1_38: 442888400
+      Era1_39: -1930759743
       Era1_4: -611504549
+      Era1_40: 1811728114
+      Era1_41: 1736796922
+      Era1_42: -803792676
+      Era1_43: 1156171328
+      Era1_44: -633243198
+      Era1_45: 394863539
+      Era1_46: 2035420091
+      Era1_47: -1389540398
+      Era1_48: 1369832104
+      Era1_49: -124680483
       Era1_5: 1846990883
+      Era1_50: -1240760759
+      Era1_51: 376388431
+      Era1_52: -1079136356
+      Era1_53: -1500952262
+      Era1_54: -768113484
+      Era1_55: 1816093998
+      Era1_56: 109368219
+      Era1_57: -2122803624
+      Era1_58: -1137958608
+      Era1_59: -3649886
       Era1_6: 235792321
+      Era1_60: -107572969
+      Era1_61: 2011894478
+      Era1_62: -1363527690
+      Era1_63: -1431508652
+      Era1_64: 1224502895
+      Era1_65: 1262431350
       Era1_7: 1237248877
       Era1_8: 943733471
       Era1_9: 1752284826

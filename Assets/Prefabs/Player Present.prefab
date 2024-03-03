@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -474,8 +474,8 @@ GameObject:
   - component: {fileID: 5719558125606810086}
   - component: {fileID: 2999995408553276062}
   - component: {fileID: 5051195481101965547}
-  - component: {fileID: 2762202369555510342}
   - component: {fileID: 1626338130082945168}
+  - component: {fileID: 1501955465510026767}
   m_Layer: 0
   m_Name: Player Present
   m_TagString: Player
@@ -493,7 +493,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.2, y: -8.23, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 674219437356242614}
@@ -571,7 +571,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
-  m_Material: {fileID: 6200000, guid: 7889b5588839549bbb91189c94ad2d32, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -582,7 +582,49 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2762202369555510342
+--- !u!114 &1626338130082945168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457749415134500401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5da9108832cf06469f3a9e86aec0964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 5
+  groundDecay: 0.5
+  speed: 13
+  maxSpeed: 50
+  canMove: 1
+  isFacingRight: 1
+  jumpForce: 25
+  isGrounded: 0
+  groundCheck: {fileID: 6065005628599221312}
+  groundCheckRadius: 0.3
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  isNearItem: 0
+  pickupCheck: {fileID: 8185162910818012094}
+  pickupCheckRadius: 0.5
+  pickupMask:
+    serializedVersion: 2
+    m_Bits: 64
+  throwPowerIndicator: {fileID: 3152761838693737356}
+  isChargingThrow: 0
+  throwChargeTime: 0
+  maxThrowChargeTime: 2
+  minThrowForce: 200
+  maxThrowForce: 500
+  itemToPickUp: {fileID: 0}
+  containerItem: {fileID: 0}
+  carryingItem: {fileID: 0}
+  itemHoldPosition: {fileID: 2158525860020190904}
+  stopInAir: 0
+--- !u!61 &1501955465510026767
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,46 +667,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.609375, y: 1.28125}
   m_EdgeRadius: 0
---- !u!114 &1626338130082945168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8457749415134500401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5da9108832cf06469f3a9e86aec0964, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 5
-  groundDecay: 0.5
-  speed: 13
-  canMove: 1
-  isFacingRight: 1
-  jumpForce: 25
-  isGrounded: 0
-  groundCheck: {fileID: 6065005628599221312}
-  groundCheckRadius: 0.3
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 8
-  isNearItem: 0
-  pickupCheck: {fileID: 8185162910818012094}
-  pickupCheckRadius: 0.5
-  pickupMask:
-    serializedVersion: 2
-    m_Bits: 64
-  throwPowerIndicator: {fileID: 3152761838693737356}
-  isChargingThrow: 0
-  throwChargeTime: 0
-  maxThrowChargeTime: 2
-  minThrowForce: 200
-  maxThrowForce: 500
-  itemToPickUp: {fileID: 0}
-  containerItem: {fileID: 0}
-  carryingItem: {fileID: 0}
-  itemHoldPosition: {fileID: 2158525860020190904}
-  stopInAir: 0

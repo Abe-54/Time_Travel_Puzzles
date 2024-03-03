@@ -104,32 +104,39 @@ public class PlayerController : MonoBehaviour
         }
 
         // Start charging the throw when carrying an item and the throw button is pressed
-        if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
-        {
-            Debug.Log("Start charging throw: " + throwChargeTime);
-            throwPowerIndicator.SetActive(true);
-            isChargingThrow = true;
-            throwChargeTime = 0f; // Reset charge time
-        }
+        // if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
+        // {
+        //     Debug.Log("Start charging throw: " + throwChargeTime);
+        //     throwPowerIndicator.SetActive(true);
+        //     isChargingThrow = true;
+        //     throwChargeTime = 0f; // Reset charge time
 
-        // While charging, increment the charge time
-        if (isChargingThrow && Input.GetKey(KeyCode.F))
-        {
-            Debug.Log("Charging throw: " + throwChargeTime);
-            throwPowerIndicator.transform.localScale = new Vector3(throwChargeTime / maxThrowChargeTime, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z);
-            throwChargeTime += Time.deltaTime;
-            throwChargeTime = Mathf.Clamp(throwChargeTime, 0, maxThrowChargeTime);
-        }
+        //     Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
+        //     if (itemRb != null)
+        //     {
+        //         itemRb.isKinematic = true;
+        //         itemRb.constraints = RigidbodyConstraints2D.FreezeAll;
+        //     }
+        // }
 
-        // Release the button to throw the item
-        if (Input.GetKeyUp(KeyCode.F) && isChargingThrow)
-        {
-            Debug.Log("Throwing item: " + throwChargeTime);
-            isChargingThrow = false;
-            throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
-            throwPowerIndicator.SetActive(false);
-            ThrowCarryingItem();
-        }
+        // // While charging, increment the charge time
+        // if (isChargingThrow && Input.GetKey(KeyCode.F))
+        // {
+        //     Debug.Log("Charging throw: " + throwChargeTime);
+        //     throwPowerIndicator.transform.localScale = new Vector3(throwChargeTime / maxThrowChargeTime, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z);
+        //     throwChargeTime += Time.deltaTime;
+        //     throwChargeTime = Mathf.Clamp(throwChargeTime, 0, maxThrowChargeTime);
+        // }
+
+        // // Release the button to throw the item
+        // if (Input.GetKeyUp(KeyCode.F) && isChargingThrow)
+        // {
+        //     Debug.Log("Throwing item: " + throwChargeTime);
+        //     isChargingThrow = false;
+        //     throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
+        //     throwPowerIndicator.SetActive(false);
+        //     ThrowCarryingItem();
+        // }
     }
 
     void FixedUpdate()
@@ -164,6 +171,111 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.SwapTimePeriod();
         }
+
+        if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
+        {
+            StartChargingThrow();
+        }
+        else if (isChargingThrow && Input.GetKey(KeyCode.F))
+        {
+            // Continuously update charging if the 'F' key is held down
+            UpdateChargingThrow();
+        }
+        else if (isChargingThrow && Input.GetKeyUp(KeyCode.F))
+        {
+            // Finish throwing when the 'F' key is released
+            FinishThrowing();
+        }
+    }
+
+    public void Move(float horizontal)
+    {
+        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+
+        if ((horizontal > 0 && !isFacingRight) || (horizontal < 0 && isFacingRight))
+        {
+            Flip();
+        }
+
+        if (Mathf.Abs(body.velocity.x) > maxSpeed)
+        {
+            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxSpeed, body.velocity.y);
+        }
+
+
+        if (stopInAir && !isGrounded) // Player is not moving and in the air
+        {
+            body.velocity = new Vector2(0, body.velocity.y);
+        }
+    }
+
+
+    void HandleJump()
+    {
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpForce);
+        }
+    }
+
+    private void StartChargingThrow()
+    {
+        Debug.Log("Start charging throw: " + throwChargeTime);
+        throwPowerIndicator.SetActive(true);
+        isChargingThrow = true;
+        throwChargeTime = 0f; // Reset charge time
+
+        Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
+        if (itemRb != null)
+        {
+            itemRb.isKinematic = true;
+            itemRb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+    }
+
+    private void UpdateChargingThrow()
+    {
+        Debug.Log("Charging throw: " + throwChargeTime);
+        throwPowerIndicator.transform.localScale = new Vector3(throwChargeTime / maxThrowChargeTime, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z);
+        throwChargeTime += Time.deltaTime;
+        throwChargeTime = Mathf.Clamp(throwChargeTime, 0, maxThrowChargeTime);
+    }
+
+    private void FinishThrowing()
+    {
+        Debug.Log("Throwing item: " + throwChargeTime);
+        isChargingThrow = false;
+        throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
+        throwPowerIndicator.SetActive(false);
+        ThrowCarryingItem();
+    }
+
+    void ThrowCarryingItem()
+    {
+        if (carryingItem != null)
+        {
+            // Calculate the throw force based on the charge time
+            float throwForce = Mathf.Lerp(minThrowForce, maxThrowForce, throwChargeTime / maxThrowChargeTime);
+
+            // Throw the item
+            Vector2 throwDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+
+            // Apply the force to the carried item
+            Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
+            if (itemRb != null)
+            {
+                itemRb.isKinematic = false;
+                itemRb.constraints = RigidbodyConstraints2D.None;
+            }
+            itemRb.transform.SetParent(null); // Detach from the player
+            itemRb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            carryingItem.GetComponent<Collider2D>().enabled = true;
+
+            uiManager.ClearInventory(); // Update UI to remove the item
+            carryingItem = null; // Clear the reference
+        }
+
+        throwChargeTime = 0f;
     }
 
     void Flip()
@@ -227,60 +339,6 @@ public class PlayerController : MonoBehaviour
         uiManager.HideInteractText();
         gameManager.knockedTree.SetActive(true);
         tree.SetActive(false);
-    }
-
-    void ThrowCarryingItem()
-    {
-        if (carryingItem != null)
-        {
-            // Calculate the throw force based on the charge time
-            float throwForce = Mathf.Lerp(minThrowForce, maxThrowForce, throwChargeTime / maxThrowChargeTime);
-
-            // Throw the item
-            Vector2 throwDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-
-            // Apply the force to the carried item
-            Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
-            itemRb.isKinematic = false;
-            itemRb.transform.SetParent(null); // Detach from the player
-            itemRb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
-            carryingItem.GetComponent<Collider2D>().enabled = true;
-
-            uiManager.ClearInventory(); // Update UI to remove the item
-            carryingItem = null; // Clear the reference
-        }
-
-        throwChargeTime = 0f;
-    }
-
-    public void Move(float horizontal)
-    {
-        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
-
-        if ((horizontal > 0 && !isFacingRight) || (horizontal < 0 && isFacingRight))
-        {
-            Flip();
-        }
-
-        if (Mathf.Abs(body.velocity.x) > maxSpeed)
-        {
-            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxSpeed, body.velocity.y);
-        }
-
-
-        if (stopInAir && !isGrounded) // Player is not moving and in the air
-        {
-            body.velocity = new Vector2(0, body.velocity.y);
-        }
-    }
-
-
-    void HandleJump()
-    {
-        if (isGrounded && Input.GetButtonDown("Jump"))
-        {
-            body.velocity = new Vector2(body.velocity.x, jumpForce);
-        }
     }
 
     void ApplyFriction()

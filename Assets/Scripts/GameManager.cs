@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,11 +17,14 @@ public class GameManager : MonoBehaviour
     public Transform pastSpawnPosition;
     public Transform presentSpawnPosition;
 
-    public GameObject pastEnvironment;
-    public GameObject presentEnvironment;
+    public GameObject[] pastObjects;
+
+    public GameObject[] presentObjects;
 
     public CinemachineVirtualCamera pastCamera;
     public CinemachineVirtualCamera presentCamera;
+
+    public event Action OnTimePeriodChanged;
 
     // Temporary Hardcoded puzzle solution for the demo
     public DirtController dirt;
@@ -38,8 +42,7 @@ public class GameManager : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
 
         currentTimePeriod = TimePeriod.Present;
-        pastEnvironment.SetActive(false);
-
+        toggleGameobjects(pastObjects, false);
         orignalGravity = player.GetComponent<Rigidbody2D>().gravityScale;
     }
 
@@ -59,10 +62,10 @@ public class GameManager : MonoBehaviour
 
         uiManager.TriggerTransition(1.0f, () =>
         {
-            pastEnvironment.SetActive(currentTimePeriod == TimePeriod.Past);
-            presentEnvironment.SetActive(currentTimePeriod == TimePeriod.Present);
+            OnTimePeriodChanged?.Invoke();
 
-            // player.transform.position = (currentTimePeriod == TimePeriod.Past) ? pastSpawnPosition.position : presentSpawnPosition.position;
+            toggleGameobjects(pastObjects, currentTimePeriod == TimePeriod.Past);
+            toggleGameobjects(presentObjects, currentTimePeriod == TimePeriod.Present);
 
             if (currentTimePeriod == TimePeriod.Past)
             {
@@ -97,5 +100,13 @@ public class GameManager : MonoBehaviour
 
         player.GetComponent<Rigidbody2D>().gravityScale = orignalGravity;
         player.canMove = true;
+    }
+
+    void toggleGameobjects(GameObject[] gameObjects, bool state)
+    {
+        foreach (GameObject gameObject in gameObjects)
+        {
+            gameObject.SetActive(state);
+        }
     }
 }
