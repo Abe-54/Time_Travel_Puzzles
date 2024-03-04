@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTimePeriod: 1
-  pastSpawnPosition: {fileID: 0}
-  presentSpawnPosition: {fileID: 0}
   pastObjects:
   - {fileID: 0}
   presentObjects:
@@ -56,8 +54,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pastCamera: {fileID: 0}
-  presentCamera: {fileID: 0}
-  dirt: {fileID: 0}
-  tree: {fileID: 0}
-  knockedTree: {fileID: 0}
+  backgroundSprite: {fileID: 0}
+  backgroundSprites:
+  - {fileID: 21300000, guid: 282b4118c5461fd4f8545ede1cf451f2, type: 3}
+  - {fileID: 21300000, guid: 8f44049e38f4f6149a84957d955e1852, type: 3}

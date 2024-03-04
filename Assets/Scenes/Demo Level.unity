@@ -1441,6 +1441,10 @@ PrefabInstance:
       value: Game Manager
       objectReference: {fileID: 0}
     - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
+      propertyPath: backgroundSprite
+      value: 
+      objectReference: {fileID: 707648222}
+    - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
       propertyPath: pastObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1975056623265717209}
@@ -1845,6 +1849,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e4f6c8f09a02b1429d4c7248034ede0, type: 3}
+--- !u!212 &707648222 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3879594699475302751, guid: 8e4f6c8f09a02b1429d4c7248034ede0, type: 3}
+  m_PrefabInstance: {fileID: 707648221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &833003683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5831790359460636706, guid: aaa532071bed016448f70b6c644829dd, type: 3}

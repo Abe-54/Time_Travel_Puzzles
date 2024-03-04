@@ -4626,6 +4626,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e4f6c8f09a02b1429d4c7248034ede0, type: 3}
+--- !u!212 &1936753659934007486 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3879594699475302751, guid: 8e4f6c8f09a02b1429d4c7248034ede0, type: 3}
+  m_PrefabInstance: {fileID: 1936753659934007485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2848388141875411294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4687,6 +4692,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
+      propertyPath: backgroundSprite
+      value: 
+      objectReference: {fileID: 1936753659934007486}
+    - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
       propertyPath: pastSpawnPosition
       value: 
       objectReference: {fileID: 800255773}
@@ -4726,6 +4735,14 @@ PrefabInstance:
       propertyPath: presentObjects.Array.data[5]
       value: 
       objectReference: {fileID: 2034987137}
+    - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
+      propertyPath: backgroundSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 282b4118c5461fd4f8545ede1cf451f2, type: 3}
+    - target: {fileID: 7484326188287679236, guid: 07359cef2b4cde1409e4a481d8e1172c, type: 3}
+      propertyPath: backgroundSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f44049e38f4f6149a84957d955e1852, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

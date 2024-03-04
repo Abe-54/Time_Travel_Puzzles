@@ -14,21 +14,17 @@ public class GameManager : MonoBehaviour
 
     public TimePeriod currentTimePeriod = TimePeriod.Present;
 
-    public Transform pastSpawnPosition;
-    public Transform presentSpawnPosition;
-
     public GameObject[] pastObjects;
 
     public GameObject[] presentObjects;
-
-    public CinemachineVirtualCamera pastCamera;
-    public CinemachineVirtualCamera presentCamera;
-
     public event Action OnTimePeriodChanged;
 
     private PlayerController player;
     private UIManager uiManager;
     private float orignalGravity;
+
+    public SpriteRenderer backgroundSprite;
+    public Sprite[] backgroundSprites = new Sprite[2];
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +33,8 @@ public class GameManager : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
 
         currentTimePeriod = TimePeriod.Present;
+        backgroundSprite.sprite = backgroundSprites[0];
+
         toggleGameobjects(pastObjects, false);
         orignalGravity = player.GetComponent<Rigidbody2D>().gravityScale;
     }
@@ -57,6 +55,8 @@ public class GameManager : MonoBehaviour
 
         uiManager.TriggerTransition(1.0f, () =>
         {
+            backgroundSprite.sprite = (currentTimePeriod == TimePeriod.Present) ? backgroundSprites[0] : backgroundSprites[1];
+
             OnTimePeriodChanged?.Invoke();
 
             toggleGameobjects(pastObjects, currentTimePeriod == TimePeriod.Past);
