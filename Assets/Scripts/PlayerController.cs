@@ -102,41 +102,6 @@ public class PlayerController : MonoBehaviour
                 DropItem();
             }
         }
-
-        // Start charging the throw when carrying an item and the throw button is pressed
-        // if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
-        // {
-        //     Debug.Log("Start charging throw: " + throwChargeTime);
-        //     throwPowerIndicator.SetActive(true);
-        //     isChargingThrow = true;
-        //     throwChargeTime = 0f; // Reset charge time
-
-        //     Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
-        //     if (itemRb != null)
-        //     {
-        //         itemRb.isKinematic = true;
-        //         itemRb.constraints = RigidbodyConstraints2D.FreezeAll;
-        //     }
-        // }
-
-        // // While charging, increment the charge time
-        // if (isChargingThrow && Input.GetKey(KeyCode.F))
-        // {
-        //     Debug.Log("Charging throw: " + throwChargeTime);
-        //     throwPowerIndicator.transform.localScale = new Vector3(throwChargeTime / maxThrowChargeTime, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z);
-        //     throwChargeTime += Time.deltaTime;
-        //     throwChargeTime = Mathf.Clamp(throwChargeTime, 0, maxThrowChargeTime);
-        // }
-
-        // // Release the button to throw the item
-        // if (Input.GetKeyUp(KeyCode.F) && isChargingThrow)
-        // {
-        //     Debug.Log("Throwing item: " + throwChargeTime);
-        //     isChargingThrow = false;
-        //     throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
-        //     throwPowerIndicator.SetActive(false);
-        //     ThrowCarryingItem();
-        // }
     }
 
     void FixedUpdate()
@@ -358,6 +323,7 @@ public class PlayerController : MonoBehaviour
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
             uiManager.UpdateInventory(carryingItem); // Assume this method updates the UI accordingly
+            uiManager.HideInteractText();
         }
     }
 
@@ -402,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Interactable") && carryingItem == null)
+        if (other.gameObject.CompareTag("Container") && carryingItem == null)
         {
             uiManager.ShowInteractText();
         }
@@ -410,29 +376,22 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Tree"))
         {
             uiManager.ShowInteractText();
-            // itemToPickUp = other.gameObject;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == itemToPickUp)
+        if (other.gameObject == itemToPickUp || other.gameObject == containerItem)
         {
-            itemToPickUp = null; // Clear the reference to the item
-            uiManager.HideInteractText(); // Optionally, hide interaction UI hints
+            uiManager.HideInteractText(); // Hide interaction UI hints
         }
 
-        // Check if the player is moving away from a container
-        if (other.gameObject == containerItem)
+        if (other.gameObject.CompareTag("Container") || other.gameObject.CompareTag("Interactable"))
         {
-            containerItem = null; // Clear the reference to the container
-            uiManager.HideInteractText(); // Optionally, hide interaction UI hints
-        }
-
-        // If the player moves away from any interactable object and there's no item or container nearby
-        if (itemToPickUp == null && containerItem == null)
-        {
-            isNearItem = false; // Update the flag indicating proximity to an interactable item or container
+            uiManager.HideInteractText();
+            containerItem = null; // Clear the container reference if exiting container trigger
+            itemToPickUp = null; // Clear the item reference if exiting item trigger
+            isNearItem = false; // Reset the flag as there's no interactable item nearby
         }
     }
 }

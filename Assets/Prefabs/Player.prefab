@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1626338130082945168}
   - component: {fileID: 1501955465510026767}
   m_Layer: 0
-  m_Name: Player Present
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 8457749415134500401}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.2, y: -8.23, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -543,7 +543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -611504549, guid: de62c37b084c76c42a01b48e52b4cc22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -571,7 +571,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7889b5588839549bbb91189c94ad2d32, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -596,11 +596,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 5
   groundDecay: 0.5
-  speed: 13
-  maxSpeed: 50
+  speed: 9
+  maxSpeed: 12
   canMove: 1
   isFacingRight: 1
-  jumpForce: 25
+  jumpForce: 22
   isGrounded: 0
   groundCheck: {fileID: 6065005628599221312}
   groundCheckRadius: 0.3
@@ -616,9 +616,9 @@ MonoBehaviour:
   throwPowerIndicator: {fileID: 3152761838693737356}
   isChargingThrow: 0
   throwChargeTime: 0
-  maxThrowChargeTime: 2
-  minThrowForce: 200
-  maxThrowForce: 500
+  maxThrowChargeTime: 1.5
+  minThrowForce: 10
+  maxThrowForce: 20
   itemToPickUp: {fileID: 0}
   containerItem: {fileID: 0}
   carryingItem: {fileID: 0}
