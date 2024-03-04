@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DirtController : MonoBehaviour
 {
@@ -10,14 +11,16 @@ public class DirtController : MonoBehaviour
 
     public GameObject seedBag;
 
-    private SpriteRenderer spriteRenderer;
-    private GameManager gameManager;
+    public Tile tile;
+    public Tilemap pastMap;
+    public Transform locationToPlant;
+
+    public TreeController tree;
+    public GameObject Axe;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,11 +30,7 @@ public class DirtController : MonoBehaviour
         {
             if (seed.seedData.seedName == "Tree")
             {
-                spriteRenderer.color = new Color(0, 1, 0, 1);
-            }
-            else if (seed.seedData.seedName == "Vine")
-            {
-                spriteRenderer.color = new Color(1, 0, 0, 1);
+                pastMap.SetTile(Vector3Int.FloorToInt(locationToPlant.position), tile);
             }
         }
     }
@@ -43,8 +42,10 @@ public class DirtController : MonoBehaviour
             Debug.Log("Seed has been planted");
             seed = other.gameObject.GetComponent<Seed>();
             hasSeed = true;
-            gameManager.tree.SetActive(true);
+            tree.gameObject.SetActive(true);
+            tree.isGrown = true;
             seedBag.SetActive(false);
+            Axe.SetActive(true);
             Destroy(other.gameObject);
         }
     }

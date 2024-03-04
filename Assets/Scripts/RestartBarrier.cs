@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class LevelEnd : MonoBehaviour
+public class RestartBarrier : MonoBehaviour
 {
-    public string nextLevel;
+    public List<GameObject> necessaryObjects;
 
     private UIManager uiManager;
 
@@ -23,11 +22,16 @@ public class LevelEnd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (necessaryObjects.Contains(other.gameObject))
         {
-            Debug.Log("Player Beat Level");
+            Rigidbody2D body = other.GetComponent<Rigidbody2D>();
 
-            uiManager.TriggerTransition(0.5f, () => { SceneManager.LoadScene(nextLevel); });
+            if (body != null)
+            {
+                body.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+
+            uiManager.ShowHelpText("Press \'R\' to Restart Level");
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Seed
   - Tree
   - Container
+  - Axe
   layers:
   - Default
   - TransparentFX

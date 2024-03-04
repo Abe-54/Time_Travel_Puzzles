@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -137,6 +139,14 @@ public class PlayerController : MonoBehaviour
             gameManager.SwapTimePeriod();
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            uiManager.TriggerTransition(0.5f, () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            });
+        }
+
         if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
         {
             StartChargingThrow();
@@ -264,7 +274,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Seed"))
+            if (hit.CompareTag("Seed") || hit.CompareTag("Pick-Up"))
             {
                 float distance = Vector2.Distance(hit.transform.position, pickupCheck.position);
                 if (distance < closestPickupableDistance)
@@ -299,13 +309,6 @@ public class PlayerController : MonoBehaviour
         isNearItem = itemToPickUp != null || containerItem != null;
     }
 
-    void InteractWithTree(GameObject tree)
-    {
-        uiManager.HideInteractText();
-        gameManager.knockedTree.SetActive(true);
-        tree.SetActive(false);
-    }
-
     void ApplyFriction()
     {
         if (isGrounded && xInput == 0 && body.velocity.y <= 0f)
@@ -323,7 +326,7 @@ public class PlayerController : MonoBehaviour
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
             uiManager.UpdateInventory(carryingItem); // Assume this method updates the UI accordingly
-            uiManager.HideInteractText();
+            uiManager.HideHelpText();
         }
     }
 
@@ -370,12 +373,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Container") && carryingItem == null)
         {
-            uiManager.ShowInteractText();
-        }
-
-        if (other.gameObject.CompareTag("Tree"))
-        {
-            uiManager.ShowInteractText();
+            uiManager.ShowHelpText("Press \'E\' to Interact");
         }
     }
 
@@ -383,12 +381,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject == itemToPickUp || other.gameObject == containerItem)
         {
-            uiManager.HideInteractText(); // Hide interaction UI hints
+            uiManager.HideHelpText(); // Hide interaction UI hints
         }
 
         if (other.gameObject.CompareTag("Container") || other.gameObject.CompareTag("Interactable"))
         {
-            uiManager.HideInteractText();
+            uiManager.HideHelpText();
             containerItem = null; // Clear the container reference if exiting container trigger
             itemToPickUp = null; // Clear the item reference if exiting item trigger
             isNearItem = false; // Reset the flag as there's no interactable item nearby

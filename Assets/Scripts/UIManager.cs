@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public Image inventoryImage;
     public Image transitionOverlay;
 
-    public TMP_Text interactText;
+    public TMP_Text helpText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +25,15 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void ShowInteractText()
+    public void ShowHelpText(String textToShow)
     {
-        interactText.gameObject.SetActive(true);
+        helpText.text = textToShow;
+        helpText.gameObject.SetActive(true);
     }
 
-    public void HideInteractText()
+    public void HideHelpText()
     {
-        interactText.gameObject.SetActive(false);
+        helpText.gameObject.SetActive(false);
     }
 
     public void UpdateInventory(GameObject item)
@@ -40,7 +41,20 @@ public class UIManager : MonoBehaviour
         Debug.Log("Picked up " + item.name);
         inventoryImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         inventoryImage.color = item.GetComponent<SpriteRenderer>().color;
-        inventoryImage.rectTransform.localScale = new Vector3(item.transform.localScale.x, item.transform.localScale.y, item.transform.localScale.z);
+        inventoryImage.SetNativeSize();
+        // inventoryImage.rectTransform.localScale = new Vector3(item.transform.localScale.x, item.transform.localScale.y, item.transform.localScale.z);
+
+        // Define the max size for the image to fit into the slot
+        Vector2 maxSize = new Vector2(40, 40); // Example slot size, adjust as needed
+        float margin = 0.95f; // Make the image slightly smaller than the slot
+
+        // Calculate the scaling factor needed to ensure the image fits within the maxSize bounds
+        float widthScale = maxSize.x / inventoryImage.rectTransform.sizeDelta.x;
+        float heightScale = maxSize.y / inventoryImage.rectTransform.sizeDelta.y;
+        float scale = Mathf.Min(widthScale, heightScale, 1) * margin; // Ensure we don't scale up, only down
+
+        // Apply the calculated scale
+        inventoryImage.rectTransform.localScale = new Vector3(scale, scale, 1);
     }
 
     public void ClearInventory()

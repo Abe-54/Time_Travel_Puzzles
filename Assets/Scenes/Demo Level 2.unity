@@ -2326,7 +2326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264013231980603484, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 6.84
       objectReference: {fileID: 0}
     - target: {fileID: 2350150388083403455, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: m_Name
@@ -5450,6 +5450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3912760521716607388, guid: 547e15f0e4d439046a7f61e42582e0ff, type: 3}
+      propertyPath: nextLevel
+      value: Demo Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5208182397899690064, guid: 547e15f0e4d439046a7f61e42582e0ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.91
