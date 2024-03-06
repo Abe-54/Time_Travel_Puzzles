@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
         Vector2 playerVelocityBeforeSwap = player.GetComponent<Rigidbody2D>().velocity;
 
+        player.isTimeTraveling = true;
+
         // Freeze Everything for a moment to swap environments
         FreezeEverything();
 
@@ -61,6 +63,8 @@ public class GameManager : MonoBehaviour
 
             toggleGameobjects(pastObjects, currentTimePeriod == TimePeriod.Past);
             toggleGameobjects(presentObjects, currentTimePeriod == TimePeriod.Present);
+
+            player.isTimeTraveling = false;
 
             player.GetComponent<Rigidbody2D>().velocity = playerVelocityBeforeSwap;
 

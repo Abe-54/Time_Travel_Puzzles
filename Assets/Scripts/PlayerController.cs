@@ -50,11 +50,18 @@ public class PlayerController : MonoBehaviour
     public GameObject carryingItem;
     public Transform itemHoldPosition;
 
+    [Space(10)]
+    [Header("Animation States")]
+    public bool isInAir = false;
+    public bool isTimeTraveling = false;
+    public bool isCarryingItem = false;
+
     [Header("Debugging")]
     public bool stopInAir = false;
 
     private float xInput;
     private Rigidbody2D body;
+    private Animator animator;
     private UIManager uiManager;
     private GameManager gameManager;
 
@@ -62,6 +69,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         uiManager = FindObjectOfType<UIManager>();
         gameManager = FindObjectOfType<GameManager>();
 
@@ -69,6 +77,8 @@ public class PlayerController : MonoBehaviour
         throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
 
         gameManager.currentTimePeriod = GameManager.TimePeriod.Present;
+
+        isFacingRight = true;
     }
 
     // Update is called once per frame
@@ -104,6 +114,8 @@ public class PlayerController : MonoBehaviour
                 DropItem();
             }
         }
+
+        UpdateAnimatorParameters();
     }
 
     void FixedUpdate()
@@ -114,9 +126,19 @@ public class PlayerController : MonoBehaviour
         }
 
         CheckGround();
+
         CheckNearItem();
         Move(xInput);
         ApplyFriction();
+    }
+
+    void UpdateAnimatorParameters()
+    {
+        animator.SetBool("isWalking", xInput != 0);
+        animator.SetBool("isFacingRight", isFacingRight);
+        animator.SetBool("isTimeTraveling", isTimeTraveling);
+        animator.SetBool("isCarryingItem", carryingItem != null);
+        animator.SetBool("isInAir", !isGrounded);
     }
 
     void CheckInput()
@@ -182,6 +204,8 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(0, body.velocity.y);
         }
+
+        animator.SetBool("isFacingRight", isFacingRight);
     }
 
 
@@ -257,6 +281,7 @@ public class PlayerController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
+        // gameObject.GetComponent<SpriteRenderer>().flipX = !isFacingRight;
     }
 
     void CheckGround()
