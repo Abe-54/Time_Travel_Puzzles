@@ -1,36 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 using System;
 using DG.Tweening;
 
+[ExecuteInEditMode]
 public class GameManager : MonoBehaviour
 {
-    public enum TimePeriod
-    {
-        Past,
-        Present
-    }
+    public TimeSwapBaseState currentState { get; private set; }
 
-    public TimePeriod currentTimePeriod = TimePeriod.Present;
+    public TimeSwapBaseState presentState;
+    public TimeSwapBaseState pastState;
 
-    public GameObject[] pastObjects;
-
-    public GameObject[] presentObjects;
-    public event Action OnTimePeriodChanged;
-
-    private PlayerController player;
-    private UIManager uiManager;
-    private float orignalGravity;
+    public SpriteRenderer backgroundSprite;
+    public float orignalGravity;
 
     public SettingsSO settings;
     public AudioSource audioSource;
     public AudioClip pastBGMusic;
     public AudioClip presentBGMusic;
 
-    public SpriteRenderer backgroundSprite;
-    public Sprite[] backgroundSprites = new Sprite[2];
+    public event Action OnTimePeriodChanged;
+
+    private UIManager uiManager;
+    private PlayerController player;
+
+    void Awake()
+    {
+        currentState = presentState;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,78 +42,78 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         uiManager = FindObjectOfType<UIManager>();
 
-        currentTimePeriod = TimePeriod.Present;
-        backgroundSprite.sprite = backgroundSprites[0];
+        currentState = presentState;
 
-        toggleGameobjects(pastObjects, false);
+        presentState.SetupState(this, player, backgroundSprite);
+        pastState.SetupState(this, player, backgroundSprite);
+
         orignalGravity = player.GetComponent<Rigidbody2D>().gravityScale;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     public void SwapTimePeriod()
     {
-        currentTimePeriod = (currentTimePeriod == TimePeriod.Past) ? TimePeriod.Present : TimePeriod.Past;
-
         Vector2 playerVelocityBeforeSwap = player.GetComponent<Rigidbody2D>().velocity;
 
         player.isTimeTraveling = true;
 
         // Freeze Everything for a moment to swap environments
-        FreezeEverything();
+        currentState.FreezeEverything();
 
         uiManager.TriggerTransition(1.0f, () =>
         {
-            // Swap the background music and fade in the new music
             audioSource.DOFade(0, 1f / 2).OnComplete(() =>
             {
-                audioSource.clip = (currentTimePeriod == TimePeriod.Present) ? presentBGMusic : pastBGMusic;
+                audioSource.clip = (currentState == presentState) ? presentBGMusic : pastBGMusic;
                 audioSource.Play();
                 audioSource.DOFade(settings.volume, 1f / 2);
             });
 
-            // audioSource.clip = (currentTimePeriod == TimePeriod.Present) ? presentBGMusic : pastBGMusic;
-
-            backgroundSprite.sprite = (currentTimePeriod == TimePeriod.Present) ? backgroundSprites[0] : backgroundSprites[1];
+            SwapState();
 
             OnTimePeriodChanged?.Invoke();
 
-            toggleGameobjects(pastObjects, currentTimePeriod == TimePeriod.Past);
-            toggleGameobjects(presentObjects, currentTimePeriod == TimePeriod.Present);
-
             player.isTimeTraveling = false;
-
             player.GetComponent<Rigidbody2D>().velocity = playerVelocityBeforeSwap;
 
-            UnfreezeEverything();
+            currentState.UnfreezeEverything();
         });
     }
 
-    void FreezeEverything()
+    public void SwapState()
     {
-        // Freeze all enemies, platforms, etc.
+        currentState.ExitState();
 
-        player.isGrounded = false;
-        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        player.GetComponent<Rigidbody2D>().gravityScale = 0;
-        player.canMove = false;
-    }
-
-    void UnfreezeEverything()
-    {
-        // Unfreeze all enemies, platforms, etc.
-        player.GetComponent<Rigidbody2D>().gravityScale = orignalGravity;
-        player.canMove = true;
-    }
-
-    void toggleGameobjects(GameObject[] gameObjects, bool state)
-    {
-        foreach (GameObject gameObject in gameObjects)
+        switch (currentState)
         {
-            gameObject.SetActive(state);
+            case PresentState:
+                currentState = pastState;
+                break;
+            case PastState:
+                currentState = presentState;
+                break;
+        }
+
+        currentState.EnterState();
+    }
+}
+
+#if UNITY_EDITOR
+
+[UnityEditor.CustomEditor(typeof(GameManager))]
+
+public class GameManagerEditor : UnityEditor.Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        GameManager gameManager = (GameManager)target;
+
+        if (GUILayout.Button("Swap Time Period"))
+        {
+            gameManager.SwapState();
         }
     }
 }
+
+#endif

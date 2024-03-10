@@ -76,8 +76,6 @@ public class PlayerController : MonoBehaviour
         throwPowerIndicator.SetActive(false);
         throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
 
-        gameManager.currentTimePeriod = GameManager.TimePeriod.Present;
-
         isFacingRight = true;
     }
 

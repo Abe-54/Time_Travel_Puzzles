@@ -33,7 +33,7 @@ public class VineActivator : MonoBehaviour
 
     private void HandleTimePeriodChanged()
     {
-        if (gameManager.currentTimePeriod == GameManager.TimePeriod.Present && areVinesPainted)
+        if (gameManager.currentState == gameManager.presentState && areVinesPainted)
         {
             PaintVines();
         }
@@ -41,32 +41,27 @@ public class VineActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        switch (gameManager.currentTimePeriod)
+        if (gameManager.currentState == gameManager.pastState)
         {
-            case GameManager.TimePeriod.Past:
+            if (other.CompareTag("Seed"))
+            {
+                Debug.Log("SEED ENTERED");
+                Seed seed = other.GetComponent<Seed>();
 
-                if (other.CompareTag("Seed"))
+                if (seed.seedData.name.CompareTo("Vine") == 0)
                 {
-                    Debug.Log("SEED ENTERED");
-                    Seed seed = other.GetComponent<Seed>();
-
-                    if (seed.seedData.name.CompareTo("Vine") == 0)
-                    {
-                        areVinesPainted = true;
-                    }
-
-                    Destroy(other.gameObject);
+                    areVinesPainted = true;
                 }
 
-                break;
-
-            case GameManager.TimePeriod.Present:
-                if (other.CompareTag("Player") && areVinesPainted)
-                {
-                    other.transform.position = tpLocation.position;
-                }
-
-                break;
+                Destroy(other.gameObject);
+            }
+        }
+        else if (gameManager.currentState == gameManager.presentState)
+        {
+            if (other.CompareTag("Player") && areVinesPainted)
+            {
+                other.transform.position = tpLocation.position;
+            }
         }
     }
 
