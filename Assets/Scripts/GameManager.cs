@@ -42,8 +42,6 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         uiManager = FindObjectOfType<UIManager>();
 
-        currentState = presentState;
-
         presentState.SetupState(this, player, backgroundSprite);
         pastState.SetupState(this, player, backgroundSprite);
 
@@ -108,6 +106,9 @@ public class GameManagerEditor : UnityEditor.Editor
         base.OnInspectorGUI();
 
         GameManager gameManager = (GameManager)target;
+
+        // display the current state and split the name by uppercase letters
+        GUILayout.Label("Current State: " + gameManager.currentState.GetType().Name.Split("State")[0] + " State");
 
         if (GUILayout.Button("Swap Time Period"))
         {
