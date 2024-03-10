@@ -257,7 +257,7 @@ public class PlayerController : MonoBehaviour
             float throwForce = Mathf.Lerp(minThrowForce, maxThrowForce, throwChargeTime / maxThrowChargeTime);
 
             // Throw the item
-            Vector2 throwDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+            Vector2 throwDirection = isFacingRight ? Vector2.right : Vector2.left;
 
             // Apply the force to the carried item
             Rigidbody2D itemRb = carryingItem.GetComponent<Rigidbody2D>();
@@ -281,7 +281,6 @@ public class PlayerController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
-        // gameObject.GetComponent<SpriteRenderer>().flipX = !isFacingRight;
     }
 
     void CheckGround()

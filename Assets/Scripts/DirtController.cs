@@ -35,9 +35,9 @@ public class DirtController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Seed"))
+        if (other.CompareTag("Seed"))
         {
             Debug.Log("Seed has been planted");
             seed = other.gameObject.GetComponent<Seed>();
@@ -49,5 +49,4 @@ public class DirtController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
 }

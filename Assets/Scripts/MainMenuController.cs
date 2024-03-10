@@ -14,6 +14,15 @@ public class MainMenuController : MonoBehaviour
 
     public int currentTutorial = 0;
 
+    public SettingsSO settings;
+
+    public AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource.volume = settings.volume;
+    }
+
     public void PlayGame()
     {
         mainMenuScreen.SetActive(false);
@@ -34,6 +43,7 @@ public class MainMenuController : MonoBehaviour
             SceneManager.LoadScene("Demo Level");
             transitionOverlay.DOFade(0, 1f / 2).OnComplete(() =>
             {
+                audioSource.DOFade(0, 1f / 2);
                 transitionOverlay.gameObject.SetActive(false);
             });
         });

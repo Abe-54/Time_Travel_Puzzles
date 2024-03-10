@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,12 +24,24 @@ public class GameManager : MonoBehaviour
     private UIManager uiManager;
     private float orignalGravity;
 
+    public SettingsSO settings;
+    public AudioSource audioSource;
+    public AudioClip pastBGMusic;
+    public AudioClip presentBGMusic;
+
     public SpriteRenderer backgroundSprite;
     public Sprite[] backgroundSprites = new Sprite[2];
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.volume = settings.volume;
+
+        audioSource.clip = presentBGMusic;
+        audioSource.Play();
+
         player = FindObjectOfType<PlayerController>();
         uiManager = FindObjectOfType<UIManager>();
 
@@ -57,6 +70,16 @@ public class GameManager : MonoBehaviour
 
         uiManager.TriggerTransition(1.0f, () =>
         {
+            // Swap the background music and fade in the new music
+            audioSource.DOFade(0, 1f / 2).OnComplete(() =>
+            {
+                audioSource.clip = (currentTimePeriod == TimePeriod.Present) ? presentBGMusic : pastBGMusic;
+                audioSource.Play();
+                audioSource.DOFade(settings.volume, 1f / 2);
+            });
+
+            // audioSource.clip = (currentTimePeriod == TimePeriod.Present) ? presentBGMusic : pastBGMusic;
+
             backgroundSprite.sprite = (currentTimePeriod == TimePeriod.Present) ? backgroundSprites[0] : backgroundSprites[1];
 
             OnTimePeriodChanged?.Invoke();
