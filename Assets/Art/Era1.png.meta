@@ -1303,27 +1303,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Era1_66
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 10
-        width: 39
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17405ec035e57154594a52d22d5312a7
-      internalID: 464423541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1399,7 +1378,6 @@ TextureImporter:
       Era1_64: 1224502895
       Era1_65: 1262431350
       Era1_66: 464423541
-      Era1_67: -1941424164
       Era1_7: 1237248877
       Era1_8: 943733471
       Era1_9: 1752284826

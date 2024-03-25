@@ -14,14 +14,13 @@ public class GameManager : MonoBehaviour
     public float orignalGravity;
 
     public SettingsSO settings;
-    public AudioSource audioSource;
-    public AudioClip pastBGMusic;
-    public AudioClip presentBGMusic;
 
     public event Action OnTimePeriodChanged;
 
     private UIManager uiManager;
     private PlayerController player;
+
+    public bool isGameActive = false;
 
     void Awake()
     {
@@ -32,13 +31,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-
-        audioSource.volume = settings.volume;
-
-        audioSource.clip = presentBGMusic;
-        audioSource.Play();
-
         player = FindObjectOfType<PlayerController>();
         uiManager = FindObjectOfType<UIManager>();
 
@@ -59,13 +51,6 @@ public class GameManager : MonoBehaviour
 
         uiManager.TriggerTransition(1.0f, () =>
         {
-            audioSource.DOFade(0, 1f / 2).OnComplete(() =>
-            {
-                audioSource.clip = (currentState == presentState) ? presentBGMusic : pastBGMusic;
-                audioSource.Play();
-                audioSource.DOFade(settings.volume, 1f / 2);
-            });
-
             SwapState();
 
             OnTimePeriodChanged?.Invoke();
