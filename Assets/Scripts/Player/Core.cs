@@ -7,6 +7,8 @@ public abstract class Core : MonoBehaviour
     public Rigidbody2D body;
     public Animator animator;
     public GroundSensor groundSensor;
+    public ItemSensor itemSensor;
+    public Transform itemHoldPosition;
     public GameObject carryingItem;
 
     public StateMachine machine;

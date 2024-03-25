@@ -6,11 +6,20 @@ public class RunState : BaseState
 {
     public AnimationClip rightAnim;
     public AnimationClip leftAnim;
+    public AnimationClip carryingItemRightAnim;
+    public AnimationClip carryingItemLeftAnim;
     public float maxXSpeed;
 
     public override void EnterState()
     {
-        PlayDirectionalAnimation(leftAnim, rightAnim);
+        if (FindObjectOfType<PlayerMovement>().isCarryingItem)
+        {
+            PlayDirectionalAnimation(carryingItemLeftAnim, carryingItemRightAnim);
+        }
+        else
+        {
+            PlayDirectionalAnimation(leftAnim, rightAnim);
+        }
     }
 
     public override void Do()

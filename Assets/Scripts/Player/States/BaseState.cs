@@ -15,6 +15,7 @@ public abstract class BaseState : MonoBehaviour
     protected Rigidbody2D body => core.body;
     protected Animator animator => core.animator;
     protected GroundSensor groundSensor => core.groundSensor;
+    protected ItemSensor itemSensor => core.itemSensor;
 
     public StateMachine machine;
 
@@ -47,9 +48,7 @@ public abstract class BaseState : MonoBehaviour
 
     public virtual void EnterState() { }
     public virtual void Do() { }
-
     public virtual void FixedDo() { }
-
     public virtual void ExitState() { }
 
     public void DoBranch()
