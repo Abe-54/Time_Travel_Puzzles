@@ -14,6 +14,7 @@ public class TimeSwapManager : MonoBehaviour
 
     public TimePeriod currentTimePeriod { get; private set; }
 
+
     [Header("Present State")]
     public GameObject[] presentObjects;
     public AudioSource presentAudioSource;
@@ -29,6 +30,7 @@ public class TimeSwapManager : MonoBehaviour
     [Header("Other References")]
     public SpriteRenderer backgroundSprite;
     public SettingsSO settings;
+    public event Action OnTimePeriodChanged;
 
     private PlayerMovement player;
     private UIManager uiManager;
@@ -54,6 +56,8 @@ public class TimeSwapManager : MonoBehaviour
         uiManager.TriggerTransition(1.0f, () =>
         {
             SwapState();
+
+            OnTimePeriodChanged?.Invoke();
 
             player.machine.Set(player.idleState);
         });

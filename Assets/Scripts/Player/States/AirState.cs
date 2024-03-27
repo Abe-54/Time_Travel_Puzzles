@@ -12,6 +12,8 @@ public class AirState : BaseState
 
     public float jumpSpeed;
 
+    public PhysicsMaterial2D frictionlessMaterial;
+
     public override void EnterState()
     {
         if (FindObjectOfType<PlayerMovement>().isCarryingItem)
@@ -22,6 +24,8 @@ public class AirState : BaseState
         {
             PlayDirectionalAnimation(leftAnim, rightAnim);
         }
+
+        core.body.sharedMaterial = frictionlessMaterial;
     }
 
     public override void Do()
@@ -38,5 +42,8 @@ public class AirState : BaseState
 
     public override void FixedDo() { }
 
-    public override void ExitState() { }
+    public override void ExitState()
+    {
+        core.body.sharedMaterial = null;
+    }
 }

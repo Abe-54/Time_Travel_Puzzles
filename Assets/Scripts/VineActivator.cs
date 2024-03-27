@@ -14,16 +14,19 @@ public class VineActivator : MonoBehaviour
 
     public bool areVinesPainted;
 
-    private GameManager gameManager;
+    // private GameManager gameManager;
+
+    private TimeSwapManager timeSwapManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        // gameManager = FindObjectOfType<GameManager>();
+        timeSwapManager = FindObjectOfType<TimeSwapManager>();
 
         areVinesPainted = false;
 
-        gameManager.OnTimePeriodChanged += HandleTimePeriodChanged;
+        timeSwapManager.OnTimePeriodChanged += HandleTimePeriodChanged;
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class VineActivator : MonoBehaviour
 
     private void HandleTimePeriodChanged()
     {
-        if (gameManager.currentState == gameManager.presentState && areVinesPainted)
+        if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Present && areVinesPainted)
         {
             PaintVines();
         }
@@ -41,7 +44,7 @@ public class VineActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (gameManager.currentState == gameManager.pastState)
+        if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Past)
         {
             if (other.CompareTag("Seed"))
             {
@@ -56,7 +59,7 @@ public class VineActivator : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-        else if (gameManager.currentState == gameManager.presentState)
+        else if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Present)
         {
             if (other.CompareTag("Player") && areVinesPainted)
             {
