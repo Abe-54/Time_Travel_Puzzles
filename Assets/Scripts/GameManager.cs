@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         presentState.SetupState(this, player, backgroundSprite);
         pastState.SetupState(this, player, backgroundSprite);
 
-        orignalGravity = player.GetComponent<Rigidbody2D>().gravityScale;
+        // orignalGravity = player.GetComponent<Rigidbody2D>().gravityScale;
     }
 
     public void SwapTimePeriod()

@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text helpText;
 
+    public bool isTransitioning = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,14 +67,21 @@ public class UIManager : MonoBehaviour
 
     public void TriggerTransition(float duration, Action onComplete)
     {
+        Debug.Log("Triggering transition");
+
+        isTransitioning = true;
+
         transitionOverlay.gameObject.SetActive(true);
         transitionOverlay.DOFade(1, duration / 2).OnComplete(() =>
         {
             onComplete(); // Call the onComplete action which will swap environments, update positions, etc.
+
             transitionOverlay.DOFade(0, duration / 2).OnComplete(() =>
             {
                 transitionOverlay.gameObject.SetActive(false);
             });
+
+            isTransitioning = false;
         });
     }
 }
