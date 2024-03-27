@@ -49,6 +49,7 @@ MonoBehaviour:
   carryingItemRightAnim: {fileID: 7400000, guid: 7a1b0a2366d924c4888742fbf0415740, type: 2}
   carryingItemLeftAnim: {fileID: 7400000, guid: 26b60018d695f4444b56dae2f4984677, type: 2}
   jumpSpeed: 22
+  frictionlessMaterial: {fileID: 6200000, guid: 7889b5588839549bbb91189c94ad2d32, type: 2}
 --- !u!1 &1672683931362743590
 GameObject:
   m_ObjectHideFlags: 0
