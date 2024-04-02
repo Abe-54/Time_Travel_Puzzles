@@ -332,6 +332,7 @@ MonoBehaviour:
   inventoryImage: {fileID: 5886047702289906776}
   transitionOverlay: {fileID: 8704749812790668343}
   helpText: {fileID: 8031563488130541110}
+  isTransitioning: 0
 --- !u!1 &4797600519682279067
 GameObject:
   m_ObjectHideFlags: 0
