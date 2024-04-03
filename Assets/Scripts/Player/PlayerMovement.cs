@@ -11,6 +11,7 @@ public class PlayerMovement : Core
     public RunState runningState;
     public AirState airState;
     public TimeSwapState timeSwapState;
+    public ClimbState climbState;
 
     [Header("Components")]
     //movement properties
@@ -65,9 +66,9 @@ public class PlayerMovement : Core
 
     void FixedUpdate()
     {
-
-        HandleXMovement();
         ApplyFriction();
+        HandleXMovement();
+        HandleClimb();
     }
 
     void SelectState()
@@ -81,6 +82,19 @@ public class PlayerMovement : Core
             else
             {
                 machine.Set(runningState);
+            }
+        }
+        else if (wallSensor.isNextToWall)
+        {
+            if (yInput == 0)
+            {
+                Debug.Log("In air state");
+                machine.Set(airState);
+            }
+            else
+            {
+                Debug.Log("In wall climb state");
+                machine.Set(climbState);
             }
         }
         else
@@ -100,12 +114,18 @@ public class PlayerMovement : Core
     {
         if (Mathf.Abs(xInput) > 0)
         {
-            //increment velocity by our accelleration, then clamp within max
-            float newSpeed = xInput * runningState.maxXSpeed;
-
-            body.velocity = new Vector2(newSpeed, body.velocity.y);
+            body.velocity = new Vector2(xInput * runningState.maxXSpeed, body.velocity.y);
 
             FaceInput();
+        }
+    }
+
+    void HandleClimb()
+    {
+        if (yInput != 0 && wallSensor.isNextToWall)
+        {
+            Debug.Log("Climbing");
+            body.velocity = new Vector2(body.velocity.x, yInput * climbState.maxYSpeed);
         }
     }
 
@@ -241,9 +261,15 @@ public class PlayerMovement : Core
 
     void ApplyFriction()
     {
-        if (groundSensor.grounded && xInput == 0 && body.velocity.y <= 0)
+        // if (groundSensor.grounded && xInput == 0 && body.velocity.y <= 0)
+        // {
+        //     body.velocity = new Vector2(body.velocity.x * groundDecay, body.velocity.y * groundDecay);
+        // }
+
+        // Stop player if not moving
+        if (groundSensor.grounded && xInput == 0)
         {
-            body.velocity *= groundDecay;
+            body.velocity = new Vector2(0, body.velocity.y);
         }
     }
 

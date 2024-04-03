@@ -19,4 +19,9 @@ public class GroundSensor : MonoBehaviour
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(groundCheck.bounds.center, groundCheck.bounds.size);
+    }
 }

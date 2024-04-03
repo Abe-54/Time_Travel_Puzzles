@@ -37,4 +37,10 @@ public class ItemSensor : MonoBehaviour
             item = null;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(itemCheck.bounds.center, itemCheck.bounds.size);
+    }
 }

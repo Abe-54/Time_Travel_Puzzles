@@ -8,6 +8,7 @@ public abstract class Core : MonoBehaviour
     public Animator animator;
     public GroundSensor groundSensor;
     public ItemSensor itemSensor;
+    public WallSensor wallSensor;
     public Transform itemHoldPosition;
     public GameObject carryingItem;
 

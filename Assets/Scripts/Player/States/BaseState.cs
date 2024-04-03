@@ -16,6 +16,7 @@ public abstract class BaseState : MonoBehaviour
     protected Animator animator => core.animator;
     protected GroundSensor groundSensor => core.groundSensor;
     protected ItemSensor itemSensor => core.itemSensor;
+    protected WallSensor wallSensor => core.wallSensor;
 
     public StateMachine machine;
 
