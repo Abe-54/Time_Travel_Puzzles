@@ -18,13 +18,9 @@ public class TimeSwapManager : MonoBehaviour
     [Header("Present State")]
     public GameObject[] presentObjects;
     public AudioSource presentAudioSource;
-    public Sprite presentBackground;
 
     [Header("Past State")]
     public GameObject[] pastObjects;
-
-    public Sprite pastBackground;
-
     public AudioSource pastAudioSource;
 
     [Header("Other References")]
@@ -63,22 +59,20 @@ public class TimeSwapManager : MonoBehaviour
         });
     }
 
-#if UNITY_EDITOR
     public void SwapTimePeriodEditorOnly()
     {
         switch (currentTimePeriod)
         {
             case TimePeriod.Present:
                 currentTimePeriod = TimePeriod.Past;
-                EnterState(pastObjects, pastBackground, presentObjects);
+                EnterState(pastObjects, presentObjects);
                 break;
             case TimePeriod.Past:
                 currentTimePeriod = TimePeriod.Present;
-                EnterState(presentObjects, presentBackground, pastObjects);
+                EnterState(presentObjects, pastObjects);
                 break;
         }
     }
-#endif
 
     public void SwapState()
     {
@@ -88,14 +82,25 @@ public class TimeSwapManager : MonoBehaviour
                 currentTimePeriod = TimePeriod.Past;
                 Debug.Log("Swapping to Past: " + currentTimePeriod);
                 FadeOutAudio(pastAudioSource, presentAudioSource);
-                EnterState(pastObjects, pastBackground, presentObjects);
+                EnterState(pastObjects, presentObjects);
+                //TODO: ADD TIME TRAVEL UI ANIMATION using dotween
+
+                /* STEPS:
+                    1. Spawn a new ui image at the player watch position
+                    2. Scale the image up to fill the screen while also playing the watch animation
+                    3. after the animation is done, swap the state
+                    4. scale the image back down to 0
+                    5. destroy the image
+                */
 
                 break;
             case TimePeriod.Past:
                 currentTimePeriod = TimePeriod.Present;
                 Debug.Log("Swapping to Present: " + currentTimePeriod);
                 FadeOutAudio(presentAudioSource, pastAudioSource);
-                EnterState(presentObjects, presentBackground, pastObjects);
+                EnterState(presentObjects, pastObjects);
+                //TODO: ADD TIME TRAVEL UI ANIMATION using dotween
+
                 break;
         }
     }
@@ -110,11 +115,9 @@ public class TimeSwapManager : MonoBehaviour
         };
     }
 
-    private void EnterState(GameObject[] objects, Sprite background, GameObject[] objectsToDeactivate)
+    private void EnterState(GameObject[] objects, GameObject[] objectsToDeactivate)
     {
         Debug.Log("Entering State");
-
-        // backgroundSprite.sprite = background;
 
         foreach (GameObject obj in objects)
         {

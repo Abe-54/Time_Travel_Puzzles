@@ -13,11 +13,13 @@ public class PresentState : TimeSwapBaseState
     {
         backgroundSprite.sprite = presentBackground;
 
+#if UNITY_EDITOR
         if (Application.isPlaying && UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
         {
             presentAudioSource.Play();
             presentAudioSource.DOFade(gameManager.settings.volume, 1.0f);
         }
+#endif
 
         foreach (GameObject gameObject in presentObjects)
         {
@@ -31,8 +33,9 @@ public class PresentState : TimeSwapBaseState
 
     public override void ExitState()
     {
+#if UNITY_EDITOR
         if (Application.isPlaying && UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) presentAudioSource.DOFade(0, 1.0f).onComplete += () => presentAudioSource.Pause();
-
+#endif
         foreach (GameObject gameObject in presentObjects)
         {
             gameObject.SetActive(false);
