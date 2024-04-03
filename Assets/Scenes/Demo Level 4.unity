@@ -1331,7 +1331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2034987138
 Transform:
   m_ObjectHideFlags: 0
@@ -1383,7 +1383,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2034987141}
+    m_ColliderPaths: []
   m_CompositePaths:
     m_Paths: []
   m_VertexDistance: 0.0005
@@ -1690,7 +1692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 106672053458763301, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 106672053458763301, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
@@ -1778,7 +1780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 714211831286299895, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 714211831286299895, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
@@ -1870,7 +1872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3471275449130129705, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3471275449130129705, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
@@ -11058,7 +11060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8103345481396846161, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8103345481396846161, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
@@ -11110,7 +11112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851648330495132547, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8851648330495132547, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -13758,7 +13760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099640712967436079, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14152,7 +14154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551949867673410233, guid: 8269413d6e50be5489d474d1217ee9ae, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3551949867673410233, guid: 8269413d6e50be5489d474d1217ee9ae, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -25664,7 +25666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6512570323557442684, guid: 8269413d6e50be5489d474d1217ee9ae, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6512570323557442684, guid: 8269413d6e50be5489d474d1217ee9ae, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -25832,7 +25834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7777441614876653319, guid: 8269413d6e50be5489d474d1217ee9ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -26112,7 +26114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208182397899690064, guid: 547e15f0e4d439046a7f61e42582e0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.49
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 5208182397899690064, guid: 547e15f0e4d439046a7f61e42582e0ff, type: 3}
       propertyPath: m_LocalPosition.z
