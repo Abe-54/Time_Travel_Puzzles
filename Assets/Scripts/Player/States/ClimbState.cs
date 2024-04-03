@@ -16,14 +16,7 @@ public class ClimbState : BaseState
 
     public override void EnterState()
     {
-        // if (FindObjectOfType<PlayerMovement>().isCarryingItem)
-        // {
-        //     PlayDirectionalAnimation(carryingItemLeftAnim, carryingItemRightAnim);
-        // }
-        // else
-        // {
-        //     PlayDirectionalAnimation(leftAnim, rightAnim);
-        // }
+        PlayDirectionalAnimation(leftAnim, rightAnim);
 
         Debug.Log("Entered Climb State");
 
@@ -34,7 +27,7 @@ public class ClimbState : BaseState
     public override void Do()
     {
         float velY = body.velocity.y;
-        animator.speed = Helpers.Map(Mathf.Abs(velY), 0, maxYSpeed, 0, 1f, true);
+        animator.speed = Helpers.Map(Mathf.Abs(velY), 0, maxYSpeed, 0, 0.5f, true);
 
         if (!wallSensor.isNextToWall || body.velocity.y == 0)
         {

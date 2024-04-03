@@ -40,7 +40,7 @@ public class MainMenuController : MonoBehaviour
         transitionOverlay.gameObject.SetActive(true);
         transitionOverlay.DOFade(1, 1f / 2).OnComplete(() =>
         {
-            SceneManager.LoadScene("Demo Level");
+            SceneManager.LoadScene("Demo Level 2");
             transitionOverlay.DOFade(0, 1f / 2).OnComplete(() =>
             {
                 audioSource.DOFade(0, 1f / 2);

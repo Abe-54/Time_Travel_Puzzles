@@ -10,8 +10,6 @@ public class VineActivator : MonoBehaviour
 
     public Transform[] vineLocations;
 
-    public Transform tpLocation;
-
     public bool areVinesPainted;
 
     // private GameManager gameManager;
@@ -57,13 +55,6 @@ public class VineActivator : MonoBehaviour
                 }
 
                 Destroy(other.gameObject);
-            }
-        }
-        else if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Present)
-        {
-            if (other.CompareTag("Player") && areVinesPainted)
-            {
-                other.transform.position = tpLocation.position;
             }
         }
     }

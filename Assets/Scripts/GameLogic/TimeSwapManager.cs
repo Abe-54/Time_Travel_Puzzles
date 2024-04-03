@@ -28,7 +28,7 @@ public class TimeSwapManager : MonoBehaviour
     public AudioSource pastAudioSource;
 
     [Header("Other References")]
-    public SpriteRenderer backgroundSprite;
+    // public SpriteRenderer backgroundSprite;
     public SettingsSO settings;
     public event Action OnTimePeriodChanged;
 
@@ -114,7 +114,7 @@ public class TimeSwapManager : MonoBehaviour
     {
         Debug.Log("Entering State");
 
-        backgroundSprite.sprite = background;
+        // backgroundSprite.sprite = background;
 
         foreach (GameObject obj in objects)
         {

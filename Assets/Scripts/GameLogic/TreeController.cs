@@ -39,7 +39,7 @@ public class TreeController : MonoBehaviour
             axeBody.transform.SetParent(tree.transform);
 
 
-            audioSource.volume = FindObjectOfType<GameManager>().settings.volume;
+            // audioSource.volume = FindObjectOfType<GameManager>().settings.volume;
 
             audioSource.PlayOneShot(audioSource.clip);
 

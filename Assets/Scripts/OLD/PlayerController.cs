@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D body;
     private Animator animator;
     private UIManager uiManager;
-    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -71,8 +70,6 @@ public class PlayerController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         uiManager = FindObjectOfType<UIManager>();
-        gameManager = FindObjectOfType<GameManager>();
-
         throwPowerIndicator.SetActive(false);
         throwPowerIndicator.transform.localScale = new Vector3(0, throwPowerIndicator.transform.localScale.y, throwPowerIndicator.transform.localScale.z); // Hide the power indicator
 
@@ -154,10 +151,10 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            gameManager.SwapTimePeriod();
-        }
+        // if (Input.GetKeyDown(KeyCode.LeftShift))
+        // {
+        //     gameManager.SwapTimePeriod();
+        // }
 
         if (Input.GetKeyDown(KeyCode.R))
         {

@@ -1377,7 +1377,7 @@ MonoBehaviour:
   transitionOverlay: {fileID: 1669208624}
   currentTutorial: 0
   settings: {fileID: 11400000, guid: 17ed3f1689fc64158bc2add9426ecde0, type: 2}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 256997927}
 --- !u!1 &1069232891
 GameObject:
   m_ObjectHideFlags: 0
