@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,9 +145,3088 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: erattpastanim_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1100
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b1ae753c4c70544937f5e80e7dfce2
+      internalID: -1451688964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1098
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d15f4dbbcfbfeb49a0cdc243a0b161e
+      internalID: 359055959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de39e54f08141e4c93bc9a919369144
+      internalID: 947350566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2483ec77fb54d468d842ac188fbc6d
+      internalID: -1435855760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016196eb21919824e9c5901f02d00117
+      internalID: 846605652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_5
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c933b524fad1b3048865db323d849e0b
+      internalID: -1485124880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_6
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3244388b213f2604682661978b5a959e
+      internalID: 1612500307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc289aa15aae4264f8c2467dc0e79641
+      internalID: -1148304197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_8
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167c5b2ddcdfbe040ab3ca5fe4232a84
+      internalID: -1504912434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_9
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdf0449c049b0b4eb9581a03cd3a8d3
+      internalID: -887607274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834e33b0c7f0d9b438f80488b064534e
+      internalID: 1985272672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_11
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109d807159c73094d82a313b274799c1
+      internalID: -2079654461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_12
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b553eb65e60c65448a68694f032788b8
+      internalID: -1912034271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149ac605574d7eb4ea3bc2fcf75ec2f8
+      internalID: 1187588865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_14
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7e00cb26a4adf4b9bc555bae51fa4e
+      internalID: 1395897227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750412b00fd8d71458fcb1257c657b6e
+      internalID: 1065156693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_16
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f67098332f829499f06553cafd4a1a
+      internalID: 444143594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_17
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa5bb4e5b38f3643ba0bd7630817132
+      internalID: 234633854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_18
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a394352d5b579d4a8b219a527c4541a
+      internalID: 2053471718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_19
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9350070e3cdf4489c35b3a528e1eee
+      internalID: -185907599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_20
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77d1fd1324841f44a7ac05f1f3591a0
+      internalID: -1472808103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_21
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ed337ee84bbcb44aa8663ae096ccc2
+      internalID: -441496083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_22
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bffe6eb859da6d4aa6f2133f395f6a0
+      internalID: 139540381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28976d4a8153fb4cbdd513010bf57ce
+      internalID: -635787695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_24
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9a198202646474d95232e80ebbf213
+      internalID: 171070735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_25
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705e2d97072f0834cae37de1836c3fae
+      internalID: 204045599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cac44434bd4824f8734cbb5856c0d7
+      internalID: -1291505685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d57540729ef724781720ca9b99f862
+      internalID: -98665730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_28
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eace49d86ff414ba7fb78f36fa506c
+      internalID: -897073445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_29
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4ef0158eac0954481488a318e438b9
+      internalID: 1057863826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_30
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a4fb36ff651744c8dfb8a1353d32b6
+      internalID: -514811461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7189d35c9cd7b014ba3c2b5d7c5b3cc7
+      internalID: 58539610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_32
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f27f4609201ef458855d3421213d23
+      internalID: -2016040065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_33
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f25a6419e8af64bbe2d7e4ced68e1b
+      internalID: -1593884628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_34
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43dec205d2858d46b2a4321176ad8ae
+      internalID: -74443645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_35
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5678c6e250f2a3e4d9f0af848c01c6b7
+      internalID: 1531923581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_36
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f11318e1efc4e4ba5df453ae8873ec
+      internalID: -459614636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_37
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251f8123b52cd1c4ba54551e6a8ea86b
+      internalID: 2041417784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_38
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771e2ad9dd9e1b84ea36dad69db7ca4e
+      internalID: -132778519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_39
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3e93582a42f1c4a82d467bb526d315
+      internalID: -717697231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_40
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5440444b0b14fa94d87420fc2d398043
+      internalID: 11605218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_41
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9329ffffb3de8874fadb0103cd9de972
+      internalID: -1749250551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_42
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23a67e674a303b46b523739f1d65458
+      internalID: 1903722218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_43
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60313c09d52012408ca80df01afc3c4
+      internalID: -388859594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_44
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed0f6f4ced7aa04fb6d7529f41e3709
+      internalID: 813441041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_45
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea37827ca7f43594fa86969e4f6017ce
+      internalID: -632341373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_46
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54149dd731648ea4d83c388410d53e78
+      internalID: -338713414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_47
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d24dda5b7e0304e95b02ffab1ea93d
+      internalID: 1431730719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_48
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d427d176874ae2f4aafe31993fe1019d
+      internalID: -831627784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_49
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa411cccdb00c54481b8091c0b1b58d
+      internalID: -2114583633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_50
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800e7a2c7fa074146b0e741a426750fa
+      internalID: 271211333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_51
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8e4b57c335ef842bb92237d64ffede
+      internalID: -171709695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_52
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d807563cb7f4b84695dc94887c6636b
+      internalID: 1320369697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_53
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41f3ad5547b8d944ad5f65a7d9a25ba
+      internalID: -669771206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_54
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54427cf1814e0d14683ef60de00bab5e
+      internalID: -336140823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_55
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05aa4dc3224dba428f1f1c0f485c7ed
+      internalID: 1138855401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_56
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bf2b1155967b340b44399f14255460
+      internalID: -387701300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_57
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7f373925ddbaa4fa1723cab2f476cb
+      internalID: 2023010459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_58
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7a3fe52dfd6047b882add3c8286e0
+      internalID: 942662165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_59
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862733383772f5749abc26f307b6cbc6
+      internalID: 1263762606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_60
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae6979781b2d2f499c0e6bcd5ca4e8c
+      internalID: -463987977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_61
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ba65330df48fc45a43e8a33316732c
+      internalID: 1539873978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_62
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79ad65079b413f469e8f2c2b98e70df
+      internalID: -37638143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_63
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e69c0871762b94084211a1e1935fde
+      internalID: 2065075968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_64
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c0c1b07ac9a1c4eb4fda0c6a1f625b
+      internalID: -67908350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_65
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae3a8220f030da449e1b642dae13f8b
+      internalID: -943059996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_66
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f860afe0a685454b94091cc7c34b35c
+      internalID: 409095200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_67
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbd2a7a3c3e7114c9ded430576b7ded
+      internalID: -1690818618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_68
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec03e5c3c4e69f5458baa672a3ee02a8
+      internalID: 125374385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_69
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc963cfd07e1fcb46a20274ddafd384a
+      internalID: -1748356950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_70
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf892528a5b1e624e8126e76bfb6da9e
+      internalID: -1476781032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_71
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf2f7b8f1977294ab192916e7cb0f02
+      internalID: -848604984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_72
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b79d1ba800a2f744b7717ed0417d1ce
+      internalID: 1126663385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_73
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44c7b45697552e43a199c7d6e96636b
+      internalID: -2052647459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_74
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0166d7d372b8a4a8d25008f913eedb
+      internalID: 61202815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_75
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fd73dbdc85b3844a314bf385388c42
+      internalID: -1128909841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_76
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98602cf20f3136b4fb6749b003ae0604
+      internalID: 106776790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_77
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76a857b2baf48a45a860ea753338286
+      internalID: 1545902121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_78
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fad4973361f5948ac20e3893e13b68
+      internalID: -2000516784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_79
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367d3244fe4cd054a968a111d8bbac9c
+      internalID: 825572135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_80
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd878e8ccdd68a4bba861d6be28c2d5
+      internalID: -425014905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_81
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b172c52a6e45c0744bb50859dee8c558
+      internalID: -294849040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_82
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b013b5bba09ef6241834493ab9d6d03d
+      internalID: -2001035813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_83
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a225cdf361630dc449c736e80eb2dfc6
+      internalID: 843387024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_84
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2dea7a2438601419574edfd80b4786
+      internalID: -565591612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_85
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f433e74952e98a044b414d179f1201e2
+      internalID: -118602773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_86
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3e63695d868b241bd267b80cfa6cae
+      internalID: -1500076295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_87
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190e37aa653a1b84bae5849be1e71c56
+      internalID: -1483617846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_88
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb86bf4eb4cb674ba39a62f542edc35
+      internalID: -1892283879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_89
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7134670ac0544f04abb2fd69a2993f70
+      internalID: -1108106265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_90
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dc8a5473284f147be07d5377ba5903
+      internalID: 1710925919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_91
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f945066e889044592a9b6a1883d919
+      internalID: -2068824386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_92
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517a2cf15f769fe49ac92a45ae37dc11
+      internalID: -676292621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_93
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0524f7272bcc9d74e9709e4b5687e8bd
+      internalID: 775796785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_94
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e043905bd49f2ea439f3fd8b7e1893ed
+      internalID: 2050833755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_95
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428324361467b8c4491f2e9ff816359a
+      internalID: -171063602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_96
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb648a44ecdebd41a27a28c0eb656ec
+      internalID: 1400972724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_97
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74968996f64f55049b7b54afe475a253
+      internalID: 1162416759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_98
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d90103ef64a5eb4c8fa0eda54333dee
+      internalID: -1330852067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_99
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db44d139c8dc354ca76cf13a6571ec3
+      internalID: 15633195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_100
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dc776c26e886e4492213a5141714a8
+      internalID: -48161094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_101
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc23c47ff63a8d47ac72bb72f9988ce
+      internalID: -1791450200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_102
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3814bf300854b847bf1fd466603e640
+      internalID: -1556464954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_103
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ba7c72c6c79584b9ee3c620db10d07
+      internalID: -2099211826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_104
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f32e0203cb9f4c8fd5a4653f78bfa
+      internalID: 468597396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_105
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e592056bb09a1504881f92f31e71a802
+      internalID: -604158836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_106
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adefc444363a4cf48be551e188c65db3
+      internalID: -1273974071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_107
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c29610e27a11348841446200ddcfaa
+      internalID: -1599434243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_108
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3843f3070c3d5419e8e5908f01e37f
+      internalID: 427636180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_109
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bbc67207f1a524080753fdef9c400c
+      internalID: -788517641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_110
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d10a47785a69524599b9dc63c75ad25
+      internalID: 504343770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_111
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15c3947f8f4acc4e82b81a4d2722518
+      internalID: -1864367528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_112
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcf92d35a12bae4eadb6607a6831df8
+      internalID: 2031757786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_113
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6811866f962674d41b37e6f3a290aea4
+      internalID: 989137128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_114
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea44e0b93b230b8498bec595a555e3ca
+      internalID: 1467966290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_115
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ffe8242b0556e428315b67203e4cfa
+      internalID: 541388428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_116
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974c106b68b8f2d4891ec8881062c864
+      internalID: 693104338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_117
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74644eaac545ea4296b21938831f246
+      internalID: 1818948388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_118
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42b34c09115c1c4cbb10ec2e045064b
+      internalID: -509091468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_119
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300c460bae422e74dbc2276a916303ca
+      internalID: 176605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_120
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf863dbb77ea774680dfe7115a24012
+      internalID: 560205486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_121
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8166bc769b110364ba4b1b485ceeecfd
+      internalID: -1870106197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_122
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2f702ca449c624a9f3c72b8da4259e
+      internalID: 761433740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_123
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a031d27b7486949a03be5461ffdcad
+      internalID: -267517757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_124
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8f1f361b050cd43bc6877c65ac618a
+      internalID: 1344527970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_125
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3099b04adf5f240be38402d1bc8946
+      internalID: 1226453712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_126
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc71d43afff55f549a749a1743f7cc7e
+      internalID: 420922111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_127
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7de754f602afab428c60253425272f9
+      internalID: -83656482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_128
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de22254b3f3211540ac6230e69504959
+      internalID: 1273011452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_129
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29310de3018c3e24094fa61bd7b9d740
+      internalID: -449443257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_130
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725cdcaaf4be7b843b7efeeb40948ae8
+      internalID: 1211503023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_131
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66955eb107bb3654e9c3a10d46d61698
+      internalID: 1543902236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_132
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bb8e8fa214b784aafc5828eb4c4ed1
+      internalID: -1695201723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_133
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ce184072cca654c94c9d9d6e1369bd
+      internalID: -984576329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_134
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921de63c51f95d74fbc6956f49ab6d6d
+      internalID: -2134731737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_135
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d9e3e6529e68d47b2af1cea5e9ab5c
+      internalID: -244279506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_136
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbebb4c416d3124cb08279e2958348d
+      internalID: -1945582279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_137
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db33ea3bc19569418759eb63ace27a9
+      internalID: 458558073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_138
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e3ed00dbfb0f341ae63fe95799926e
+      internalID: 1177595684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_139
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4b120281d308b49aec645830ee19b1
+      internalID: 1853118349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_140
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57b3962028bc974a8128ab053567dc2
+      internalID: 815285931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_141
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a032dc7efdc953f4bbd266888819ac68
+      internalID: -823153390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_142
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd357371c237ad4c86f679212407a3b
+      internalID: -158087666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_143
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb69619f7187ce64aa951161c384fdc7
+      internalID: 879689414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_144
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6425c60ba6bdc448782e74ec559b3c
+      internalID: -10742585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpastanim_145
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2fb2d25150e524e9dae9a5539146c3
+      internalID: -95710022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +3237,153 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      erattpastanim_0: -1451688964
+      erattpastanim_1: 359055959
+      erattpastanim_10: 1985272672
+      erattpastanim_100: -48161094
+      erattpastanim_101: -1791450200
+      erattpastanim_102: -1556464954
+      erattpastanim_103: -2099211826
+      erattpastanim_104: 468597396
+      erattpastanim_105: -604158836
+      erattpastanim_106: -1273974071
+      erattpastanim_107: -1599434243
+      erattpastanim_108: 427636180
+      erattpastanim_109: -788517641
+      erattpastanim_11: -2079654461
+      erattpastanim_110: 504343770
+      erattpastanim_111: -1864367528
+      erattpastanim_112: 2031757786
+      erattpastanim_113: 989137128
+      erattpastanim_114: 1467966290
+      erattpastanim_115: 541388428
+      erattpastanim_116: 693104338
+      erattpastanim_117: 1818948388
+      erattpastanim_118: -509091468
+      erattpastanim_119: 176605
+      erattpastanim_12: -1912034271
+      erattpastanim_120: 560205486
+      erattpastanim_121: -1870106197
+      erattpastanim_122: 761433740
+      erattpastanim_123: -267517757
+      erattpastanim_124: 1344527970
+      erattpastanim_125: 1226453712
+      erattpastanim_126: 420922111
+      erattpastanim_127: -83656482
+      erattpastanim_128: 1273011452
+      erattpastanim_129: -449443257
+      erattpastanim_13: 1187588865
+      erattpastanim_130: 1211503023
+      erattpastanim_131: 1543902236
+      erattpastanim_132: -1695201723
+      erattpastanim_133: -984576329
+      erattpastanim_134: -2134731737
+      erattpastanim_135: -244279506
+      erattpastanim_136: -1945582279
+      erattpastanim_137: 458558073
+      erattpastanim_138: 1177595684
+      erattpastanim_139: 1853118349
+      erattpastanim_14: 1395897227
+      erattpastanim_140: 815285931
+      erattpastanim_141: -823153390
+      erattpastanim_142: -158087666
+      erattpastanim_143: 879689414
+      erattpastanim_144: -10742585
+      erattpastanim_145: -95710022
+      erattpastanim_15: 1065156693
+      erattpastanim_16: 444143594
+      erattpastanim_17: 234633854
+      erattpastanim_18: 2053471718
+      erattpastanim_19: -185907599
+      erattpastanim_2: 947350566
+      erattpastanim_20: -1472808103
+      erattpastanim_21: -441496083
+      erattpastanim_22: 139540381
+      erattpastanim_23: -635787695
+      erattpastanim_24: 171070735
+      erattpastanim_25: 204045599
+      erattpastanim_26: -1291505685
+      erattpastanim_27: -98665730
+      erattpastanim_28: -897073445
+      erattpastanim_29: 1057863826
+      erattpastanim_3: -1435855760
+      erattpastanim_30: -514811461
+      erattpastanim_31: 58539610
+      erattpastanim_32: -2016040065
+      erattpastanim_33: -1593884628
+      erattpastanim_34: -74443645
+      erattpastanim_35: 1531923581
+      erattpastanim_36: -459614636
+      erattpastanim_37: 2041417784
+      erattpastanim_38: -132778519
+      erattpastanim_39: -717697231
+      erattpastanim_4: 846605652
+      erattpastanim_40: 11605218
+      erattpastanim_41: -1749250551
+      erattpastanim_42: 1903722218
+      erattpastanim_43: -388859594
+      erattpastanim_44: 813441041
+      erattpastanim_45: -632341373
+      erattpastanim_46: -338713414
+      erattpastanim_47: 1431730719
+      erattpastanim_48: -831627784
+      erattpastanim_49: -2114583633
+      erattpastanim_5: -1485124880
+      erattpastanim_50: 271211333
+      erattpastanim_51: -171709695
+      erattpastanim_52: 1320369697
+      erattpastanim_53: -669771206
+      erattpastanim_54: -336140823
+      erattpastanim_55: 1138855401
+      erattpastanim_56: -387701300
+      erattpastanim_57: 2023010459
+      erattpastanim_58: 942662165
+      erattpastanim_59: 1263762606
+      erattpastanim_6: 1612500307
+      erattpastanim_60: -463987977
+      erattpastanim_61: 1539873978
+      erattpastanim_62: -37638143
+      erattpastanim_63: 2065075968
+      erattpastanim_64: -67908350
+      erattpastanim_65: -943059996
+      erattpastanim_66: 409095200
+      erattpastanim_67: -1690818618
+      erattpastanim_68: 125374385
+      erattpastanim_69: -1748356950
+      erattpastanim_7: -1148304197
+      erattpastanim_70: -1476781032
+      erattpastanim_71: -848604984
+      erattpastanim_72: 1126663385
+      erattpastanim_73: -2052647459
+      erattpastanim_74: 61202815
+      erattpastanim_75: -1128909841
+      erattpastanim_76: 106776790
+      erattpastanim_77: 1545902121
+      erattpastanim_78: -2000516784
+      erattpastanim_79: 825572135
+      erattpastanim_8: -1504912434
+      erattpastanim_80: -425014905
+      erattpastanim_81: -294849040
+      erattpastanim_82: -2001035813
+      erattpastanim_83: 843387024
+      erattpastanim_84: -565591612
+      erattpastanim_85: -118602773
+      erattpastanim_86: -1500076295
+      erattpastanim_87: -1483617846
+      erattpastanim_88: -1892283879
+      erattpastanim_89: -1108106265
+      erattpastanim_9: -887607274
+      erattpastanim_90: 1710925919
+      erattpastanim_91: -2068824386
+      erattpastanim_92: -676292621
+      erattpastanim_93: 775796785
+      erattpastanim_94: 2050833755
+      erattpastanim_95: -171063602
+      erattpastanim_96: 1400972724
+      erattpastanim_97: 1162416759
+      erattpastanim_98: -1330852067
+      erattpastanim_99: 15633195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

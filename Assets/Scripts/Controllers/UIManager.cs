@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
 {
     public Image inventoryImage;
     public Image transitionOverlay;
+    public Image watchImage;
+    public GameObject canvas;
 
     public TMP_Text helpText;
 

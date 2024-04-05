@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,9 +145,3046 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: erattpresentanim_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1100
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d9d4881c0323f4281df0fc8d6cf1c6
+      internalID: 839895250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1098
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40fcd2fbe870924c8bae415021ede2d
+      internalID: -686199084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee16b9931542ed41baa1524d77375b4
+      internalID: 953926604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d743db973e0afa42b28aeaf12d0f0ef
+      internalID: -1553926357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db70b8b393506344da3e7310958f6ad8
+      internalID: 661883248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_5
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9677a204d83c5fc4493386da87a90286
+      internalID: -1806685052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_6
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a02f193f945e34198f1c253cde0b94
+      internalID: -1516075172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9de160e1614c8345a3682e5b0513bdb
+      internalID: 2097430157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_8
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051b6004c80c3c84ba5b615b5786ec52
+      internalID: -1429201554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_9
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4894682c7b3289d42b9d6c9af3f28882
+      internalID: -1710623570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf352800910271847aee86caf4e9d283
+      internalID: 1656194938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_11
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ac82ee92a93a34b83db1f22b18da21
+      internalID: 625315046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef059383c494844bb92e0dc0a4d8578
+      internalID: 756904679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_13
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3975cf7c2b96e42a390fd1703ef552
+      internalID: -949314448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_14
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc1d2ca4cfa8694298b0eac4b608ed6
+      internalID: -1248966077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_15
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ebe299c27a9d340a9da66c2ad00336
+      internalID: 1135512938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_16
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f95a0ef469d68c4681d6d660210c4b8
+      internalID: -11885887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9906de284fa0e4a82a815ed4dd0986
+      internalID: -1126813581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_18
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8750fd676cfd864f815697ccf54d1e7
+      internalID: -959717401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_19
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea5924da2084474084b0a4c5cf3f030
+      internalID: -1092770810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_20
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2df1c54fd26564bab0734088fba949
+      internalID: 1462237506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_21
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a06a40b40cd414f90913fe6ee2ac71
+      internalID: -541328455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_22
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a5f4b20875be84eb6a827c35fbb01f
+      internalID: -1153586846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_23
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1000
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22dd91934eb0b54281732e13ca7eeca
+      internalID: 1621993209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_24
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81636f4f54c47b842be2fff1dee0c956
+      internalID: 1069623554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_25
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ada31895b76698419615f1ed9e5507d
+      internalID: 1304756172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_26
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b579cbd5ee28547b09f8129b527d30
+      internalID: 1112320003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_27
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c38803bde3840e4bb249c6f63523da4
+      internalID: -423674950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_28
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f78d1f77816bf40b1cd67abc609a53
+      internalID: 1484256802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a266381a70b682540b41924eeb202b36
+      internalID: -1650922589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_30
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2229693012785428bf37876faef570
+      internalID: -1298527874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_31
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40e24777fee37d46bcd06e7f84645a5
+      internalID: 328011732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_32
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee60a152d29936940b253b45e309b796
+      internalID: 1746907197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_33
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8136cc6b779094cb7d11dc674e1d76
+      internalID: 930290927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_34
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d86c10f0fb7174a84b5c7ca8a4d655
+      internalID: -339499764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_35
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 904
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ce926bf988f24428f9a92ae759d5f3
+      internalID: -1285899806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_36
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cf3bd6ecab5f047919697226da97c4
+      internalID: 1657898109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_37
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0297443b113f4442aad3300ecded034
+      internalID: -1630269461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_38
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5319cefdb5a2b4a9f80253c1c2e990
+      internalID: 1171369342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_39
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74e2eb12da52e9459bdbdc52a9bebe7
+      internalID: 1032651514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_40
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4195fb3ac210c419fe6d73215960e1
+      internalID: -263723320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_41
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a03c8e3516c154895938740e6fd3eb
+      internalID: -1213885304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_42
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2646f4ac94e404994030eb08250703
+      internalID: 1981025767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_43
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6058ed46ee7249e4fbd80ed6584f407d
+      internalID: 370730518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_44
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fcaef336c6af544a986c23c0a29d15
+      internalID: -301791725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_45
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b0d1bfbb4cc8848ac7a369652b5aef
+      internalID: -903773605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d34dd22b4682a4f9beb7ea2c193bee
+      internalID: -295634317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_47
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 808
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17483ed7b044f0744afa489a2308a8d7
+      internalID: 509810016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_48
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8792c22d1eda40541a37d16f151a9489
+      internalID: -1995886875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_49
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b098238625084b4dbf67bc5da97b1bb
+      internalID: 433262487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_50
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffdde1cdb8745e4bb1f97382c2e8840
+      internalID: 1744827856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_51
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30882ae288ad41745b83f7fb42857aae
+      internalID: -2070875270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_52
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ce10817d558744d9d5e9ce14bfb262
+      internalID: 1724601917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_53
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df92f29fde9fed84a806e843c67c25ea
+      internalID: -1520493638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_54
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dd9b96ac6738048b5e321631ea1b99
+      internalID: 2072048530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_55
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0199d7bcf6c4a46bb63aaf8d0730c7
+      internalID: 1121851228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_56
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87d27ca1c9a0f4478a20f600dc239f0
+      internalID: -319282996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_57
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d4bbe6f78afe244a6167169eadf9f7
+      internalID: 1839030804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_58
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba479a5712d24834787a41ddcf8de75c
+      internalID: -670970623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_59
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 712
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389070e9d3e516b4f81ecbd4620fbfe6
+      internalID: -1537955425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_60
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fac2e75f6f2bf439781e912a4afdda
+      internalID: -1723133540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_61
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50032ac33df9d242881d8fffaa5e678
+      internalID: -388755464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_62
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9de2239c6c6ec4e9e3f6cf426fbd4d
+      internalID: -1962256856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_63
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a712bef473c21419f67192f97c6de8
+      internalID: -1714878816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_64
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55231bfeaf7f4b843aaf756da981d594
+      internalID: -1591750650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_65
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f1962d332af754998fdd838157d832
+      internalID: 836198255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_66
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc97d204d0b60d7429494251823f7b8c
+      internalID: 1991741542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_67
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facf239bcc57cd0409de554d2665e4c3
+      internalID: 1158264501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_68
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af052ecba4aa264e96a961d8360ee48
+      internalID: -1888912085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_69
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e572cec7094c47b7e843c4d840c53
+      internalID: 669611212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_70
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9ebeda3139c784ea1ab46d62e7c729
+      internalID: -1257646518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_71
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 616
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313c577a461509b4cb7232170d9f46c4
+      internalID: 1093441055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_72
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9ff0176447a9b4bbae2effee7fae61
+      internalID: 1546785483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_73
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753de8fd1d57e13408f012e9bb8c01eb
+      internalID: 735587953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_74
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e077dd37689464db9ecc19e50d8e4d
+      internalID: 1654158544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_75
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24a3ad08f412d1408fe40fd017c77c1
+      internalID: -713309964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_76
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74bda2133c62a04fb1f06950b4b5b69
+      internalID: 2029998729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_77
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8788f0827ac1f244bd965a7cacc96bc
+      internalID: -1798329085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_78
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6149dfdff3cc84d8986e2fea309a56
+      internalID: 812918886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_79
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb4b35473d2bd24f8061e9584c4382d
+      internalID: -1606192900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_80
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd77543877031a240a08b7ca9e524fad
+      internalID: -446868937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_81
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202c7f53b74d89948adb6f6e2b54313f
+      internalID: 1841080883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_82
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9db1f89adfb09747b89ded22d19600b
+      internalID: 12943176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_83
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a947bd75bf47ea43ac55ce6176902f1
+      internalID: -1917302137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_84
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1e77574433b3240801584f3425d1e0
+      internalID: -2111625961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_85
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc66a217942a2df40bc66c663372a21b
+      internalID: -869594269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_86
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41944da55b45f9439d024e94ebf22e5
+      internalID: -416956768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_87
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cf4b389a15c894e841d20acf6ee5bf
+      internalID: 623897400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_88
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0a2232d7d78064ba20fca681e93b41
+      internalID: -1063742519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_89
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4cbff718a513948bd07ca7faa32db6
+      internalID: 447834023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_90
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683766e32782ae84ba110009a8daa73c
+      internalID: -1863464463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_91
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fe753ed7b394f43934cd8ea4f6d681
+      internalID: -631461984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_92
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ade734e1d33df4faafbf43e61dcff7
+      internalID: -11890254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_93
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2b72b2f989cac44bccdfdb07ef9593
+      internalID: 874687254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_94
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3b896390948e54599c70cc7a6d372e
+      internalID: 1662878811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_95
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d63a51fa4cd62468e2cd608f9ca4c1
+      internalID: 1895989503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_96
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009984f036ddafc438e660786b95d973
+      internalID: 1053548674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_97
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e8472d114bc99438ee6966958ff289
+      internalID: -1798907023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_98
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b11fe0c8271b4d4db7ac2b11ff6cddb
+      internalID: 1647910343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_99
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a8f5b2a568e2740bcc47ac52c82c1c
+      internalID: -352170109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_100
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef092dde4178f644b905e4137d285ff6
+      internalID: -2069246006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_101
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdb0ce2cbca5e844a8751f9c8836d99
+      internalID: 1643942792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_102
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f90344b2e3ddf4eb50bebc7092851a
+      internalID: -1392742673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_103
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc08060cb007f24459255a666300d441
+      internalID: -421189777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_104
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c5308ec601e1b4fa7a27ed93b329b4
+      internalID: 2020045019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_105
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747c1e4308eec5b459c0cf5af61add1b
+      internalID: 1239881005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_106
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e29d7db00498854fbce2a2605a2b8d2
+      internalID: 1865047750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_107
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 328
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ade291c798a57f4c936eded44d2ad08
+      internalID: 443899041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_108
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa26b1c134634ba4a973084222e4e7b5
+      internalID: 1897154217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_109
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ef37334c276cd43843e9e801f01883
+      internalID: -502549161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_110
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca43b8b5d8b90a419943ad52c1bdcf6
+      internalID: -295389246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_111
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9e73ea6769263479353777dd4b385f
+      internalID: -288782526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_112
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dba9767f4a3d2247920c797dc6d96ae
+      internalID: 1926215124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_113
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1863488e7917c834a9ed13de6bd990bb
+      internalID: 1801418526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_114
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5e75f9ef45b0f41919de559fe0d376
+      internalID: 1958460385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_115
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b99d8e56ba1554da5b129e8965f5f2
+      internalID: -961966360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_116
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b334f9592fda0640844b042ddb99788
+      internalID: -781065914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_117
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ea254254f68c242912d7caa1b70bc5
+      internalID: -989730043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_118
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3f77ffc6668dc40a466f40a895560d
+      internalID: -661490704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_119
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 232
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929443a80a90a4d4dbae37ca224d8457
+      internalID: -1475153346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_120
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b3415aa3c02584eb8027e3671927f7
+      internalID: -1623120797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_121
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1835aaa3ae94aa74f864751f2f5ca37a
+      internalID: -953625386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_122
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1a880ed40b894499d0eb8ce7ba37ec
+      internalID: 1629095766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_123
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b7c20a066db244a98f141774998e57
+      internalID: -1999774902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_124
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1963e74d092a5d94eaed142e3e800705
+      internalID: -1146198664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_125
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1537aec0af8624a4c85154cc56ee4281
+      internalID: -1201695442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_126
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e550d49d635ba3a4b841f5c4a6c93f8c
+      internalID: 361479317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_127
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7346ead360bb54f8070ffd61ecfef7
+      internalID: -1790042739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_128
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e1752894b69fe4fa39efa531ca0036
+      internalID: 89201396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_129
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d96b26617f6474596ffc02c2e7ce84
+      internalID: -1996028208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_130
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ddb298283562f47bd5f800c088d134
+      internalID: 736809875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_131
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 136
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d0dbbeb0655ad49886856d39b9306f
+      internalID: 460462892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_132
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef39144f39228a4eae45424a2e4050c
+      internalID: -408021891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_133
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22137c3ec49e21a4a9831102bd3cdc29
+      internalID: -599455409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_134
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fd0d1abc3add24184d104dfb14aa3d
+      internalID: 58308763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_135
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aae1dccb83e1844db3d89f30f323a6d
+      internalID: 1793462489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_136
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa66a3f820d7bc1458b864a80475657b
+      internalID: -1736509560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_137
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7c0c7d5a8741440a77cd872dcf537e
+      internalID: -1618080332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_138
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8467c2e5c1b9c4990fff5ab629ac62
+      internalID: 1389406027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_139
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd02b2fa009ce594d8d5e39713c6e8de
+      internalID: 1881304643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_140
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862306b2ba5fea04bbc1bf0f23bc8198
+      internalID: -842834242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_141
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb369f03bd9b604689debd983ab0af9
+      internalID: 927234990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_142
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f1163a5a60dc54c8f3c4492c695352
+      internalID: 1014321177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: erattpresentanim_143
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 40
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a818fa219267914f97b26bd64390218
+      internalID: 718696101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +3195,151 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      erattpresentanim_0: 839895250
+      erattpresentanim_1: -686199084
+      erattpresentanim_10: 1656194938
+      erattpresentanim_100: -2069246006
+      erattpresentanim_101: 1643942792
+      erattpresentanim_102: -1392742673
+      erattpresentanim_103: -421189777
+      erattpresentanim_104: 2020045019
+      erattpresentanim_105: 1239881005
+      erattpresentanim_106: 1865047750
+      erattpresentanim_107: 443899041
+      erattpresentanim_108: 1897154217
+      erattpresentanim_109: -502549161
+      erattpresentanim_11: 625315046
+      erattpresentanim_110: -295389246
+      erattpresentanim_111: -288782526
+      erattpresentanim_112: 1926215124
+      erattpresentanim_113: 1801418526
+      erattpresentanim_114: 1958460385
+      erattpresentanim_115: -961966360
+      erattpresentanim_116: -781065914
+      erattpresentanim_117: -989730043
+      erattpresentanim_118: -661490704
+      erattpresentanim_119: -1475153346
+      erattpresentanim_12: 756904679
+      erattpresentanim_120: -1623120797
+      erattpresentanim_121: -953625386
+      erattpresentanim_122: 1629095766
+      erattpresentanim_123: -1999774902
+      erattpresentanim_124: -1146198664
+      erattpresentanim_125: -1201695442
+      erattpresentanim_126: 361479317
+      erattpresentanim_127: -1790042739
+      erattpresentanim_128: 89201396
+      erattpresentanim_129: -1996028208
+      erattpresentanim_13: -949314448
+      erattpresentanim_130: 736809875
+      erattpresentanim_131: 460462892
+      erattpresentanim_132: -408021891
+      erattpresentanim_133: -599455409
+      erattpresentanim_134: 58308763
+      erattpresentanim_135: 1793462489
+      erattpresentanim_136: -1736509560
+      erattpresentanim_137: -1618080332
+      erattpresentanim_138: 1389406027
+      erattpresentanim_139: 1881304643
+      erattpresentanim_14: -1248966077
+      erattpresentanim_140: -842834242
+      erattpresentanim_141: 927234990
+      erattpresentanim_142: 1014321177
+      erattpresentanim_143: 718696101
+      erattpresentanim_15: 1135512938
+      erattpresentanim_16: -11885887
+      erattpresentanim_17: -1126813581
+      erattpresentanim_18: -959717401
+      erattpresentanim_19: -1092770810
+      erattpresentanim_2: 953926604
+      erattpresentanim_20: 1462237506
+      erattpresentanim_21: -541328455
+      erattpresentanim_22: -1153586846
+      erattpresentanim_23: 1621993209
+      erattpresentanim_24: 1069623554
+      erattpresentanim_25: 1304756172
+      erattpresentanim_26: 1112320003
+      erattpresentanim_27: -423674950
+      erattpresentanim_28: 1484256802
+      erattpresentanim_29: -1650922589
+      erattpresentanim_3: -1553926357
+      erattpresentanim_30: -1298527874
+      erattpresentanim_31: 328011732
+      erattpresentanim_32: 1746907197
+      erattpresentanim_33: 930290927
+      erattpresentanim_34: -339499764
+      erattpresentanim_35: -1285899806
+      erattpresentanim_36: 1657898109
+      erattpresentanim_37: -1630269461
+      erattpresentanim_38: 1171369342
+      erattpresentanim_39: 1032651514
+      erattpresentanim_4: 661883248
+      erattpresentanim_40: -263723320
+      erattpresentanim_41: -1213885304
+      erattpresentanim_42: 1981025767
+      erattpresentanim_43: 370730518
+      erattpresentanim_44: -301791725
+      erattpresentanim_45: -903773605
+      erattpresentanim_46: -295634317
+      erattpresentanim_47: 509810016
+      erattpresentanim_48: -1995886875
+      erattpresentanim_49: 433262487
+      erattpresentanim_5: -1806685052
+      erattpresentanim_50: 1744827856
+      erattpresentanim_51: -2070875270
+      erattpresentanim_52: 1724601917
+      erattpresentanim_53: -1520493638
+      erattpresentanim_54: 2072048530
+      erattpresentanim_55: 1121851228
+      erattpresentanim_56: -319282996
+      erattpresentanim_57: 1839030804
+      erattpresentanim_58: -670970623
+      erattpresentanim_59: -1537955425
+      erattpresentanim_6: -1516075172
+      erattpresentanim_60: -1723133540
+      erattpresentanim_61: -388755464
+      erattpresentanim_62: -1962256856
+      erattpresentanim_63: -1714878816
+      erattpresentanim_64: -1591750650
+      erattpresentanim_65: 836198255
+      erattpresentanim_66: 1991741542
+      erattpresentanim_67: 1158264501
+      erattpresentanim_68: -1888912085
+      erattpresentanim_69: 669611212
+      erattpresentanim_7: 2097430157
+      erattpresentanim_70: -1257646518
+      erattpresentanim_71: 1093441055
+      erattpresentanim_72: 1546785483
+      erattpresentanim_73: 735587953
+      erattpresentanim_74: 1654158544
+      erattpresentanim_75: -713309964
+      erattpresentanim_76: 2029998729
+      erattpresentanim_77: -1798329085
+      erattpresentanim_78: 812918886
+      erattpresentanim_79: -1606192900
+      erattpresentanim_8: -1429201554
+      erattpresentanim_80: -446868937
+      erattpresentanim_81: 1841080883
+      erattpresentanim_82: 12943176
+      erattpresentanim_83: -1917302137
+      erattpresentanim_84: -2111625961
+      erattpresentanim_85: -869594269
+      erattpresentanim_86: -416956768
+      erattpresentanim_87: 623897400
+      erattpresentanim_88: -1063742519
+      erattpresentanim_89: 447834023
+      erattpresentanim_9: -1710623570
+      erattpresentanim_90: -1863464463
+      erattpresentanim_91: -631461984
+      erattpresentanim_92: -11890254
+      erattpresentanim_93: 874687254
+      erattpresentanim_94: 1662878811
+      erattpresentanim_95: 1895989503
+      erattpresentanim_96: 1053548674
+      erattpresentanim_97: -1798907023
+      erattpresentanim_98: 1647910343
+      erattpresentanim_99: -352170109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

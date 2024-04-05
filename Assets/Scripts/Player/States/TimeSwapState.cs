@@ -9,6 +9,7 @@ public class TimeSwapState : BaseState
     public bool isTimeTraveling = false;
     public Vector2 playerVelocityBeforeSwap;
     public float originalGravity;
+    public Transform watchPosition;
 
     public TimeSwapManager timeSwapManager;
 
