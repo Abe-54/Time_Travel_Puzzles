@@ -11,8 +11,9 @@ public class AirState : BaseState
     public AnimationClip carryingItemLeftAnim;
 
     public float jumpSpeed;
+    public float maxFallSpeed;
 
-    public PhysicsMaterial2D frictionlessMaterial;
+    // public PhysicsMaterial2D frictionlessMaterial;
 
     public override void EnterState()
     {
@@ -25,7 +26,7 @@ public class AirState : BaseState
             PlayDirectionalAnimation(leftAnim, rightAnim);
         }
 
-        core.body.sharedMaterial = frictionlessMaterial;
+        // core.body.sharedMaterial = frictionlessMaterial;
     }
 
     public override void Do()
@@ -37,6 +38,11 @@ public class AirState : BaseState
         if (groundSensor.grounded)
         {
             isComplete = true;
+        }
+
+        if (body.velocity.y < maxFallSpeed)
+        {
+            body.velocity = new Vector2(body.velocity.x, maxFallSpeed);
         }
     }
 

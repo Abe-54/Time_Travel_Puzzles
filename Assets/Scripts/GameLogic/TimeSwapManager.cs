@@ -51,43 +51,38 @@ public class TimeSwapManager : MonoBehaviour
         }
         player.machine.Set(player.timeSwapState);
 
-        //TODO: ADD TIME TRAVEL UI ANIMATION using dotween
+        DoWatchSequence();
+    }
 
-        /* STEPS:
-            1. Spawn a new ui image at the player watch position
-            2. Scale the image up to fill the screen while also playing the watch animation
-            3. after the animation is done, swap the state
-            4. scale the image back down to 0
-            5. destroy the image
-        */
-
+    private void DoWatchSequence(float duration = 1.0f)
+    {
         // Convert the watch position to screen space
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(player.timeSwapState.watchPosition.position);
 
-        Image watchImage = Instantiate(uiManager.watchImage, screenPosition, Quaternion.identity, uiManager.canvas.transform);
+        Image watchImage = Instantiate(uiManager.watchImage, screenPosition, Quaternion.identity, uiManager.transform.parent);
         watchImage.transform.localScale = Vector3.one * 0.1f;
 
         Sequence sequence = DOTween.Sequence();
-        // spawn the watch image, scale it up and play the animation, while also shaking the image and fade to black with the watch image on top
-        sequence.Append(watchImage.transform.DOMove(new Vector2(Screen.width / 2, Screen.height / 2), 1.0f).SetEase(Ease.InOutQuint));
-        sequence.Join(watchImage.transform.DOScale(maxWatchScale, 1.0f));
-        watchImage.GetComponent<Animator>().Play(currentTimePeriod == TimePeriod.Present ? "WatchToPast" : "WatchToPresent");
-        sequence.Join(uiManager.transitionOverlay.DOFade(1.0f, 1.0f)).onComplete += () =>
-        {
-            SwapState();
-        };
-        sequence.Join(watchImage.DOFade(1.0f, 1.0f));
+        sequence.Append(watchImage.transform.DOMove(new Vector2(Screen.width / 2, Screen.height / 2), duration).SetEase(Ease.InOutQuint));
+        sequence.Join(watchImage.transform.DOScale(maxWatchScale, duration));
+
+        string animationName = currentTimePeriod == TimePeriod.Present ? "WatchToPast" : "WatchToPresent";
+        watchImage.GetComponent<Animator>().Play(animationName);
+
+        sequence.Join(Helpers.Fade(uiManager.transitionOverlay, 0.0f, 1.0f, duration)).onComplete += SwapState;
+        sequence.Join(Helpers.Fade(watchImage, 0.0f, 1.0f, duration));
+
+        // End of Sequence, back to gameplay
         sequence.onComplete += () =>
         {
-            // On Complete of the animation, swap the state, scale the image back down, fade in to gameplay, and destroy the watch image
             Sequence completeSequence = DOTween.Sequence();
-            completeSequence.Append(watchImage.transform.DOScale(0, 1.0f));
+            completeSequence.Append(watchImage.transform.DOScale(0, duration));
 
             Vector2 newScreenPosition = Camera.main.WorldToScreenPoint(player.timeSwapState.watchPosition.position);
 
-            completeSequence.Join(watchImage.transform.DOMove(newScreenPosition, 1.0f).SetEase(Ease.InOutQuint));
-            completeSequence.Join(uiManager.transitionOverlay.DOFade(0, 1.0f));
-            completeSequence.Join(watchImage.DOFade(0, 1.0f));
+            completeSequence.Join(watchImage.transform.DOMove(newScreenPosition, duration).SetEase(Ease.InOutQuint));
+            completeSequence.Join(Helpers.Fade(uiManager.transitionOverlay, 1.0f, 0f, duration, true));
+            completeSequence.Join(Helpers.Fade(watchImage, 1.0f, 0f, duration, true));
             completeSequence.onComplete += () =>
             {
                 Destroy(watchImage.gameObject);
@@ -95,18 +90,6 @@ public class TimeSwapManager : MonoBehaviour
                 player.machine.Set(player.idleState);
             };
         };
-
-
-
-
-        // uiManager.TriggerTransition(1.0f, () =>
-        // {
-        //     SwapState();
-
-        //     OnTimePeriodChanged?.Invoke();
-
-        //     player.machine.Set(player.idleState);
-        // });
     }
 
     public void SwapTimePeriodEditorOnly()

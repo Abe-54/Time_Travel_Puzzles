@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     public Image inventoryImage;
     public Image transitionOverlay;
     public Image watchImage;
-    public GameObject canvas;
 
     public TMP_Text helpText;
 
@@ -20,7 +19,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Helpers.Fade(transitionOverlay, 1f, 0f, 1f, true);
     }
 
     // Update is called once per frame
@@ -46,7 +45,6 @@ public class UIManager : MonoBehaviour
         inventoryImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         inventoryImage.color = item.GetComponent<SpriteRenderer>().color;
         inventoryImage.SetNativeSize();
-        // inventoryImage.rectTransform.localScale = new Vector3(item.transform.localScale.x, item.transform.localScale.y, item.transform.localScale.z);
 
         // Define the max size for the image to fit into the slot
         Vector2 maxSize = new Vector2(40, 40); // Example slot size, adjust as needed
@@ -73,8 +71,7 @@ public class UIManager : MonoBehaviour
 
         isTransitioning = true;
 
-        transitionOverlay.gameObject.SetActive(true);
-        transitionOverlay.DOFade(1, duration / 2).OnComplete(() =>
+        Helpers.Fade(transitionOverlay, 1.0f, 1.0f, 1.0f).OnComplete(() =>
         {
             onComplete(); // Call the onComplete action which will swap environments, update positions, etc.
 

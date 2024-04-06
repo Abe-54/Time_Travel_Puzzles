@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : Core
 {
@@ -32,6 +33,7 @@ public class PlayerMovement : Core
     public float xInput { get; private set; }
     public float yInput { get; private set; }
     public bool pickupInput { get; private set; }
+    public bool restartInput { get; private set; }
 
     private Vector3 originalScale;
     private UIManager uiManager;
@@ -73,6 +75,17 @@ public class PlayerMovement : Core
 
     void SelectState()
     {
+
+        if (restartInput)
+        {
+            machine.Set(idleState);
+
+            uiManager.TriggerTransition(0.5f, () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            });
+        }
+
         if (groundSensor.grounded)
         {
             if (xInput == 0)
@@ -108,6 +121,7 @@ public class PlayerMovement : Core
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         pickupInput = Input.GetKeyDown(KeyCode.E);
+        restartInput = Input.GetKeyDown(KeyCode.R);
     }
 
     void HandleXMovement()
