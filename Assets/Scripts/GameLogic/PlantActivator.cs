@@ -24,10 +24,10 @@ public abstract class PlantActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Past && other.CompareTag("Seed"))
-        {
-            Seed seed = other.GetComponent<Seed>();
+        Seed seed = other.GetComponent<Seed>();
 
+        if (timeSwapManager.currentTimePeriod == TimeSwapManager.TimePeriod.Past && other.CompareTag("Pick-Up") && seed != null)
+        {
             Debug.Log("Seed planted: " + seed.seedData.seedName);
 
             if (IsCorrectSeed(seed))
