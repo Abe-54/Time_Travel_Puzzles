@@ -23,7 +23,6 @@ public class JumpPadLogic : MonoBehaviour
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(other.GetComponent<Rigidbody2D>().velocity.x, jumpForce);
             Sequence sequence = DOTween.Sequence();
-            sequence.AppendInterval(0.1f);
             sequence.AppendCallback(() =>
             {
                 spriteRenderer.sprite = pressedSprite;
