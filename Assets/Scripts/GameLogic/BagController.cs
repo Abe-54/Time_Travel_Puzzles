@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BagController : MonoBehaviour
+public class BagController : MonoBehaviour, IInteractable
 {
     public GameObject itemToDispense;
+    private GameObject spawnedItem = null;
 
-    public GameObject SpawnItem(GameObject location)
+    public void Interact(PlayerMovement player)
     {
         if (itemToDispense != null)
         {
-            GameObject item = Instantiate(itemToDispense, location.transform.position, Quaternion.identity);
-
-            return item;
+            spawnedItem = Instantiate(itemToDispense, player.itemHoldPosition.position, Quaternion.identity);
+            player.PickupItem(spawnedItem);
         }
-
-        return null;
     }
 }

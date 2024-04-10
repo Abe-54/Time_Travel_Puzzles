@@ -23,7 +23,7 @@ public class ItemSensor : MonoBehaviour
 
             foreach (Collider2D i in items)
             {
-                if (i.CompareTag("Seed") || i.CompareTag("Container"))
+                if (i.CompareTag("Container") || i.CompareTag("Pick-Up"))
                 {
                     Debug.Log("Item detected: " + i.gameObject.name);
                     item = i.gameObject;

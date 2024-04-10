@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57c78721f011b4a6589aca37d9b703d4
+guid: 128951f738c8a7d44b5185a930f32598
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,33 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,194 +132,81 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WoodenCrate_0
+      name: tree_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 16
         y: 0
-        width: 66
-        height: 65
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d610b23d39eac1448da8076334dfb0b
-      internalID: 64007642
+      spriteID: f461a89fdc468064d855c44272ffe565
+      internalID: 1501619352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenCrate_1
+      name: tree_1
       rect:
         serializedVersion: 2
-        x: 87
+        x: 112
         y: 0
-        width: 66
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e3b9c1045a8ba346bcba4e64320f857
-      internalID: -369415340
+      spriteID: 96c20bb9c9ae12f4abd57cfbf3fb8e3e
+      internalID: 1446591228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenCrate_2
+      name: tree_2
       rect:
         serializedVersion: 2
-        x: 167
+        x: 208
         y: 0
-        width: 66
-        height: 70
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: babf4f788bc0dc445b27163e6023157c
-      internalID: 178782976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_3
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 0
-        width: 66
-        height: 73
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a45aecd99980b114ebfd9ddd86b51cfd
-      internalID: -1191769147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_4
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 0
-        width: 66
-        height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ad3c1aea1ec5a944874652c09286337
-      internalID: 1111000645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_5
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 0
-        width: 66
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00caa360f63acf24895113acfe43181a
-      internalID: -1424689392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_6
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 0
-        width: 66
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 353f22dea9852a94d8a03e7f22d6637e
-      internalID: -566006186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_7
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 0
-        width: 66
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e79cb1a5c7512ca4a953f91e810f7646
-      internalID: -1529898448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodenCrate_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f907c84c01b2eb74bb56a14314d85c3c
-      internalID: 1513735085
+      spriteID: 20def2de1d4e1504e923f7b2ab041fe9
+      internalID: 557722919
       vertices: []
       indices: 
       edges: []
@@ -361,15 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WoodenCrate_0: 64007642
-      WoodenCrate_1: -369415340
-      WoodenCrate_2: 178782976
-      WoodenCrate_3: -1191769147
-      WoodenCrate_4: 1111000645
-      WoodenCrate_5: -1424689392
-      WoodenCrate_6: -566006186
-      WoodenCrate_7: -1529898448
-      WoodenCrate_8: 1513735085
+      tree_0: 1501619352
+      tree_1: 1446591228
+      tree_2: 557722919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -69,7 +69,12 @@ public class TimeSwapManager : MonoBehaviour
         string animationName = currentTimePeriod == TimePeriod.Present ? "WatchToPast" : "WatchToPresent";
         watchImage.GetComponent<Animator>().Play(animationName);
 
-        sequence.Join(Helpers.Fade(uiManager.transitionOverlay, 0.0f, 1.0f, duration)).onComplete += SwapState;
+        sequence.Join(Helpers.Fade(uiManager.transitionOverlay, 0.0f, 1.0f, duration))
+            .onComplete += () =>
+                {
+                    SwapState();
+                    OnTimePeriodChanged?.Invoke();
+                };
         sequence.Join(Helpers.Fade(watchImage, 0.0f, 1.0f, duration));
 
         // End of Sequence, back to gameplay
@@ -86,7 +91,6 @@ public class TimeSwapManager : MonoBehaviour
             completeSequence.onComplete += () =>
             {
                 Destroy(watchImage.gameObject);
-                OnTimePeriodChanged?.Invoke();
                 player.machine.Set(player.idleState);
             };
         };

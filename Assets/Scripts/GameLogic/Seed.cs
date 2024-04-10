@@ -11,10 +11,4 @@ public class Seed : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = seedData.seedIcon;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

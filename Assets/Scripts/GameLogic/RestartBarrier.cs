@@ -7,11 +7,13 @@ public class RestartBarrier : MonoBehaviour
     public List<GameObject> necessaryObjects;
 
     private UIManager uiManager;
+    private PlayerMovement player;
 
     // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        player = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class RestartBarrier : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (necessaryObjects.Contains(other.gameObject))
+        if (necessaryObjects.Contains(other.gameObject) || other.gameObject == player.gameObject)
         {
             Rigidbody2D body = other.GetComponent<Rigidbody2D>();
 

@@ -248,38 +248,38 @@ public class PlayerMovement : Core
 
     private void HandleItemInteraction()
     {
-        if (pickupInput)
+        if (!pickupInput) return;
+
+        // Try dropping the item if carrying one.
+        if (isCarryingItem)
         {
-            if (itemSensor.itemDetected && !isCarryingItem)
-            {
-                if (itemSensor.item.CompareTag("Container"))
-                {
-                    Debug.Log("Taking item from container");
-                    GameObject item = itemSensor.item.GetComponent<BagController>().SpawnItem(itemHoldPosition.gameObject);
-                    PickupItem(item);
-                }
-                else
-                {
-                    Debug.Log("Picking up item");
-                    PickupItem(itemSensor.item);
-                }
-            }
-            else if (isCarryingItem)
-            {
-                Debug.Log("Dropping item");
-                DropItem();
-            }
+            DropItem();
+            return;
+        }
+
+        // Early exit if no item detected.
+        if (!itemSensor.itemDetected) return;
+
+        GameObject detectedItem = itemSensor.item;
+        IInteractable interactable = detectedItem.GetComponent<IInteractable>();
+
+        // Interact using the IInteractable interface if available.
+        if (interactable != null)
+        {
+            interactable.Interact(this);
+            return;
+        }
+
+        // Fallback to tag-based interaction for simple pickup items.
+        if (detectedItem.CompareTag("Pick-Up"))
+        {
+            PickupItem(detectedItem);
         }
     }
 
 
     void ApplyFriction()
     {
-        // if (groundSensor.grounded && xInput == 0 && body.velocity.y <= 0)
-        // {
-        //     body.velocity = new Vector2(body.velocity.x * groundDecay, body.velocity.y * groundDecay);
-        // }
-
         // Stop player if not moving
         if (groundSensor.grounded && xInput == 0)
         {
@@ -287,7 +287,7 @@ public class PlayerMovement : Core
         }
     }
 
-    private void PickupItem(GameObject item)
+    public void PickupItem(GameObject item)
     {
         if (item != null)
         {

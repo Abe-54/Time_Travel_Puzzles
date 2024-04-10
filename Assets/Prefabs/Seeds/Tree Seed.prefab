@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1402416565689458928}
   m_Layer: 6
   m_Name: Tree Seed
-  m_TagString: Seed
+  m_TagString: Pick-Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
