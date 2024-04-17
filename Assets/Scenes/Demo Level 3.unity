@@ -477,6 +477,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2034987143}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -1563,7 +1575,7 @@ Transform:
   m_GameObject: {fileID: 416318425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.214981, y: -3, z: -10}
+  m_LocalPosition: {x: -4.2300377, y: -3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1733,6 +1745,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5563998829595924683, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.596603
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539469241819835415, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 54.689003
+      objectReference: {fileID: 0}
     - target: {fileID: 6602895555713982177, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.4
@@ -1776,6 +1796,10 @@ PrefabInstance:
     - target: {fileID: 6615883704732513008, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400217643555100401, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.597248
       objectReference: {fileID: 0}
     - target: {fileID: 7880207234586541055, guid: cdbee36d5bf4349369d41a67613e66b3, type: 3}
       propertyPath: m_Name
@@ -2636,6 +2660,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2034987143}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -3041,6 +3077,18 @@ PrefabInstance:
       propertyPath: vineMap
       value: 
       objectReference: {fileID: 2034987143}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 5
@@ -4206,6 +4254,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2034987143}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -4379,6 +4439,18 @@ PrefabInstance:
       propertyPath: vineMap
       value: 
       objectReference: {fileID: 2034987143}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 6
@@ -11728,6 +11800,11 @@ PrefabInstance:
       addedObject: {fileID: 277964099}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
+--- !u!1839735485 &348888406987285395 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 3780764258597606113, guid: a555a0d7b5aa11947b9f0e8e66648948, type: 3}
+  m_PrefabInstance: {fileID: 348888406987285394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5373859273882167460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11841,6 +11918,18 @@ PrefabInstance:
       propertyPath: vineMap
       value: 
       objectReference: {fileID: 2034987143}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: correctSeed
+      value: 
+      objectReference: {fileID: 8722905029449237132, guid: c85a80e7e22770c46ab2c80db778216d, type: 3}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: pastTilemap
+      value: 
+      objectReference: {fileID: 348888406987285395}
+    - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
+      propertyPath: saplingTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6057053a02b3e2e459ed4dd32b2cb2a8, type: 2}
     - target: {fileID: 5016968385063558678, guid: 2eda25544184eb849984351d8b7b5898, type: 3}
       propertyPath: vineLocations.Array.size
       value: 5

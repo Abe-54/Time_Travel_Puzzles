@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public abstract class PlantActivator : MonoBehaviour
 {
     public Seed correctSeed;
     protected TimeSwapManager timeSwapManager;
+
+    public Tile saplingTile;
+    public Tilemap pastTilemap;
+    public Transform saplingLocation;
 
     protected bool arePlantsGrown { get; private set; } = false;
 
@@ -34,6 +39,7 @@ public abstract class PlantActivator : MonoBehaviour
             {
                 Debug.Log("Correct seed planted");
                 arePlantsGrown = true;
+                pastTilemap.SetTile(pastTilemap.WorldToCell(saplingLocation.position), saplingTile);
             }
 
             Destroy(other.gameObject);
