@@ -43,7 +43,7 @@ public class DirtController : MonoBehaviour
             seed = other.gameObject.GetComponent<Seed>();
             hasSeed = true;
             tree.gameObject.SetActive(true);
-            tree.isGrown = true;
+            // tree.isGrown = true;
             seedBag.SetActive(false);
             Axe.SetActive(true);
             Destroy(other.gameObject);

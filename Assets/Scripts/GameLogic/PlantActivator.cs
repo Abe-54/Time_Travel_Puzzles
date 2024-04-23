@@ -6,8 +6,7 @@ public abstract class PlantActivator : MonoBehaviour
     public Seed correctSeed;
     protected TimeSwapManager timeSwapManager;
 
-    public Tile saplingTile;
-    public Tilemap pastTilemap;
+    public GameObject sapling;
     public Transform saplingLocation;
 
     protected bool arePlantsGrown { get; private set; } = false;
@@ -39,7 +38,7 @@ public abstract class PlantActivator : MonoBehaviour
             {
                 Debug.Log("Correct seed planted");
                 arePlantsGrown = true;
-                pastTilemap.SetTile(pastTilemap.WorldToCell(saplingLocation.position), saplingTile);
+                Instantiate(sapling, saplingLocation.position, saplingLocation.rotation);
             }
 
             Destroy(other.gameObject);
