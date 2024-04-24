@@ -621,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1018,6 +1018,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e7d6b88566e4ebdab969959d8604fc, type: 3}
+--- !u!1 &441820405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441820406}
+  m_Layer: 0
+  m_Name: Sapling Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441820406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441820405}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.265, z: 0}
+  m_LocalScale: {x: 0.28653297, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808513297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456442251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2899746062896856706, guid: 79999599491a444449953d39b93e8284, type: 3}
@@ -1411,7 +1442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1630,7 +1661,8 @@ Transform:
   m_LocalPosition: {x: 47.76, y: -3.925, z: 19.1277}
   m_LocalScale: {x: 3.49, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 441820406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &808513298
@@ -1692,7 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctSeed: {fileID: 8722905029449237132, guid: c6ee7a15ba7d3f14ea626ab776190c05, type: 3}
   sapling: {fileID: 6591454567457680011, guid: 74469e2eded924e3c95eadb1b3aa5cf9, type: 3}
-  saplingLocation: {fileID: 808513297}
+  saplingLocation: {fileID: 441820406}
   Tree: {fileID: 1677572897}
 --- !u!1001 &838647058
 PrefabInstance:
@@ -1804,8 +1836,8 @@ Transform:
   m_GameObject: {fileID: 881629845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.039, y: -0.602, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.039, y: -0.676, z: 0}
+  m_LocalScale: {x: 1, y: 1.09, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 602572639}
@@ -1874,7 +1906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2381,7 +2413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2710,7 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topTree: {fileID: 602572638}
   pivotTree: {fileID: 881629846}
-  zRotation: 93.55
+  zRotation: 105.89
   rotationSpeed: 1
   isKnocked: 0
 --- !u!1001 &1687466134
@@ -3007,7 +3039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3285,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1341471466835509561, guid: 821c1ba0099974012aa264c3759f8069, type: 3}
       propertyPath: m_LocalRotation.w

@@ -169,7 +169,7 @@ public class PlayerMovement : Core
 
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump") && (groundSensor.grounded || coyoteTimer <= coyoteTime))
+        if ((Input.GetButtonDown("Jump") || yInput > 0) && (groundSensor.grounded || coyoteTimer <= coyoteTime))
         {
             body.velocity = new Vector2(body.velocity.x, airState.jumpSpeed);
             coyoteTimer = coyoteTime + 1;
