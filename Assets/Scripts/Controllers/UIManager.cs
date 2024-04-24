@@ -67,20 +67,25 @@ public class UIManager : MonoBehaviour
 
     public void TriggerTransition(float duration, Action onComplete)
     {
-        Debug.Log("Triggering transition");
+        // Debug.Log("Triggering transition");
 
-        isTransitioning = true;
+        // isTransitioning = true;
 
-        Helpers.Fade(transitionOverlay, 1.0f, 1.0f, 1.0f).OnComplete(() =>
-        {
-            onComplete(); // Call the onComplete action which will swap environments, update positions, etc.
+        // transitionOverlay.gameObject.SetActive(true);
 
-            transitionOverlay.DOFade(0, duration / 2).OnComplete(() =>
-            {
-                transitionOverlay.gameObject.SetActive(false);
-            });
+        // Helpers.Fade(transitionOverlay, 0f, 1.0f, duration).OnComplete(() =>
+        // {
+        //     onComplete(); // Call the onComplete action which will swap environments, update positions, etc.
 
-            isTransitioning = false;
-        });
+        //     transitionOverlay.DOFade(0, duration / 2).OnComplete(() =>
+        //     {
+        //         transitionOverlay.gameObject.SetActive(false);
+        //     });
+
+        //     isTransitioning = false;
+        // });
+
+        Debug.LogWarning("OLD IMPLEMENTATION");
     }
+
 }

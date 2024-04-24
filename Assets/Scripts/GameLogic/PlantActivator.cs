@@ -38,7 +38,8 @@ public abstract class PlantActivator : MonoBehaviour
             {
                 Debug.Log("Correct seed planted");
                 arePlantsGrown = true;
-                Instantiate(sapling, saplingLocation.position, saplingLocation.rotation);
+                GameObject newSapling = Instantiate(sapling, saplingLocation.position, saplingLocation.rotation);
+                timeSwapManager.pastObjects.Add(newSapling);
             }
 
             Destroy(other.gameObject);

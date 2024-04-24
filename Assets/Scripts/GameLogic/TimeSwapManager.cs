@@ -17,11 +17,11 @@ public class TimeSwapManager : MonoBehaviour
 
 
     [Header("Present State")]
-    public GameObject[] presentObjects;
+    public List<GameObject> presentObjects;
     public AudioSource presentAudioSource;
 
     [Header("Past State")]
-    public GameObject[] pastObjects;
+    public List<GameObject> pastObjects;
     public AudioSource pastAudioSource;
 
     [Header("Other References")]
@@ -144,7 +144,7 @@ public class TimeSwapManager : MonoBehaviour
         };
     }
 
-    private void EnterState(GameObject[] objects, GameObject[] objectsToDeactivate)
+    private void EnterState(List<GameObject> objects, List<GameObject> objectsToDeactivate)
     {
         Debug.Log("Entering State");
 

@@ -29,6 +29,10 @@ public class PlayerMovement : Core
     public float minThrowForce = 5f; // Minimum throw force
     public float maxThrowForce = 20f; // Maximum throw force based on max charge time
 
+    [Header("Coyote Time")]
+    public float coyoteTime = 0.1f;
+    public float coyoteTimer = 0f;
+
     //variables
     public float xInput { get; private set; }
     public float yInput { get; private set; }
@@ -54,6 +58,7 @@ public class PlayerMovement : Core
     void Update()
     {
         CheckInput();
+        UpdateCoyoteTime();
         HandleJump();
         HandleThrowing();
         HandleTimeTravel();
@@ -71,6 +76,19 @@ public class PlayerMovement : Core
         ApplyFriction();
         HandleXMovement();
         HandleClimb();
+    }
+
+    void UpdateCoyoteTime()
+    {
+        // If grounded, reset the coyote timer, otherwise increase it
+        if (groundSensor.grounded)
+        {
+            coyoteTimer = 0f;
+        }
+        else
+        {
+            coyoteTimer += Time.deltaTime;
+        }
     }
 
     void SelectState()
@@ -151,9 +169,10 @@ public class PlayerMovement : Core
 
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump") && groundSensor.grounded)
+        if (Input.GetButtonDown("Jump") && (groundSensor.grounded || coyoteTimer <= coyoteTime))
         {
             body.velocity = new Vector2(body.velocity.x, airState.jumpSpeed);
+            coyoteTimer = coyoteTime + 1;
         }
     }
 

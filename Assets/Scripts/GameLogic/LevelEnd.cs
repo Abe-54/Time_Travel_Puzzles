@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,7 +28,10 @@ public class LevelEnd : MonoBehaviour
         {
             Debug.Log("Player Beat Level");
 
-            uiManager.TriggerTransition(0.5f, () => { SceneManager.LoadScene(nextLevel); });
+            Sequence levelEndSequence = DOTween.Sequence();
+            levelEndSequence.Append(Helpers.Fade(uiManager.transitionOverlay, 0f, 1f, 1f))
+                .AppendInterval(1f)
+                .OnComplete(() => SceneManager.LoadScene(nextLevel));
         }
     }
 }
