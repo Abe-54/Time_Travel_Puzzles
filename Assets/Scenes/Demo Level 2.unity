@@ -1645,6 +1645,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7393347597756891115, guid: b68a35668c4af46acb97abda7dba354d, type: 3}
+      propertyPath: maxFallSpeed
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393347597756891115, guid: b68a35668c4af46acb97abda7dba354d, type: 3}
       propertyPath: frictionlessMaterial
       value: 
       objectReference: {fileID: 6200000, guid: 7889b5588839549bbb91189c94ad2d32, type: 2}
