@@ -8,6 +8,13 @@ public class ItemSensor : MonoBehaviour
 
     public bool itemDetected { get; private set; }
 
+    private UIManager uiManager;
+
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
+
     void FixedUpdate()
     {
         CheckItem();
@@ -19,6 +26,8 @@ public class ItemSensor : MonoBehaviour
 
         if (itemDetected)
         {
+            uiManager.ShowPickUpPrompt();
+
             Collider2D[] items = Physics2D.OverlapAreaAll(itemCheck.bounds.min, itemCheck.bounds.max, itemMask);
 
             foreach (Collider2D i in items)
@@ -34,6 +43,7 @@ public class ItemSensor : MonoBehaviour
         }
         else
         {
+            uiManager.HidePickUpPrompt();
             item = null;
         }
     }

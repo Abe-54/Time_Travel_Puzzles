@@ -14,6 +14,10 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text helpText;
 
+    public TMP_Text climbingText;
+    public TMP_Text pickUpText;
+    public TMP_Text throwText;
+
     public bool isTransitioning = false;
 
     // Start is called before the first frame update
@@ -25,18 +29,26 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Add all the text elements to a list
+        List<TMP_Text> helpTexts = new List<TMP_Text> { climbingText, pickUpText, throwText };
 
-    }
+        // when turning one text element, add it to a queue and hide all the other text elements
+        // when the queue has more than one element, hide all the other text elements
+        // when one text element is turned off, show the next one in the queue
 
-    public void ShowHelpText(String textToShow)
-    {
-        helpText.text = textToShow;
-        helpText.gameObject.SetActive(true);
-    }
-
-    public void HideHelpText()
-    {
-        helpText.gameObject.SetActive(false);
+        foreach (TMP_Text text in helpTexts)
+        {
+            if (text.gameObject.activeSelf)
+            {
+                foreach (TMP_Text t in helpTexts)
+                {
+                    if (t != text)
+                    {
+                        t.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 
     public void UpdateInventory(GameObject item)
@@ -88,4 +100,55 @@ public class UIManager : MonoBehaviour
         Debug.LogWarning("OLD IMPLEMENTATION");
     }
 
+    public void ShowClimbingPrompt()
+    {
+        Debug.Log("Show climbing prompt");
+        climbingText.gameObject.SetActive(true);
+        climbingText.text = "Hold 'up' to climb the wall";
+    }
+
+    public void ShowThrowPrompt()
+    {
+        Debug.Log("Show throw prompt");
+        throwText.gameObject.SetActive(true);
+        throwText.text = "Hold 'F' to throw";
+    }
+
+    public void ShowPickUpPrompt()
+    {
+        Debug.Log("Show pick up prompt");
+        pickUpText.gameObject.SetActive(true);
+        pickUpText.text = "Press 'E' to pick up";
+    }
+
+    public void HideClimbingPrompt()
+    {
+        climbingText.text = "";
+        climbingText.gameObject.SetActive(false);
+    }
+
+    public void HideThrowPrompt()
+    {
+        throwText.text = "";
+        throwText.gameObject.SetActive(false);
+    }
+
+    public void HidePickUpPrompt()
+    {
+        pickUpText.text = "";
+        pickUpText.gameObject.SetActive(false);
+    }
+
+    public void ShowHelpText(string prompt)
+    {
+        Debug.Log("Show pick up prompt");
+        helpText.gameObject.SetActive(true);
+        helpText.text = prompt;
+    }
+
+    public void HideHelpText()
+    {
+        helpText.text = "";
+        helpText.gameObject.SetActive(false);
+    }
 }

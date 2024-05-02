@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestartBarrier : MonoBehaviour
 {
@@ -33,7 +34,9 @@ public class RestartBarrier : MonoBehaviour
                 body.constraints = RigidbodyConstraints2D.FreezeAll;
             }
 
-            uiManager.ShowHelpText("Press \'R\' to Restart Level");
+            // uiManager.ShowHelpText("Press \'R\' to Restart Level");
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

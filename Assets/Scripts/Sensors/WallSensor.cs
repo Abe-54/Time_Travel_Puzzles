@@ -7,7 +7,26 @@ public class WallSensor : MonoBehaviour
     public BoxCollider2D wallCheck;
     public LayerMask wallMask;
 
+    private UIManager uiManager;
+
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
+
     public bool isNextToWall { get; private set; }
+
+    private void Update()
+    {
+        if (isNextToWall)
+        {
+            uiManager.ShowClimbingPrompt();
+        }
+        else
+        {
+            uiManager.HideClimbingPrompt();
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()

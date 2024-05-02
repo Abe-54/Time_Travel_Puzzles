@@ -16,6 +16,7 @@ public class PlayerMovement : Core
 
     [Header("Components")]
     //movement properties
+    public AudioSource climbAudio;
     public float acceleration;
     [Range(0f, 1f)]
     public float groundDecay;
@@ -66,6 +67,15 @@ public class PlayerMovement : Core
         if (!timeSwapState.isTimeTraveling)
         { SelectState(); }
 
+        if (isCarryingItem && carryingItem != null)
+        {
+            uiManager.ShowThrowPrompt();
+        }
+        else
+        {
+            uiManager.HideThrowPrompt();
+        }
+
         machine.state.DoBranch();
 
         HandleItemInteraction();
@@ -98,10 +108,7 @@ public class PlayerMovement : Core
         {
             machine.Set(idleState);
 
-            uiManager.TriggerTransition(0.5f, () =>
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            });
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (groundSensor.grounded)
@@ -158,6 +165,15 @@ public class PlayerMovement : Core
         {
             Debug.Log("Climbing");
             body.velocity = new Vector2(body.velocity.x, yInput * climbState.maxYSpeed);
+
+            if (!climbAudio.isPlaying)
+            {
+                climbAudio.PlayOneShot(climbAudio.clip);
+            }
+        }
+        else
+        {
+            climbAudio.Stop();
         }
     }
 
@@ -180,6 +196,7 @@ public class PlayerMovement : Core
     {
         if (Input.GetKeyDown(KeyCode.F) && carryingItem != null)
         {
+            uiManager.HideThrowPrompt();
             StartChargingThrow();
         }
         else if (isChargingThrow && Input.GetKey(KeyCode.F))
@@ -310,6 +327,9 @@ public class PlayerMovement : Core
     {
         if (item != null)
         {
+            uiManager.HidePickUpPrompt();
+            uiManager.ShowThrowPrompt();
+
             carryingItem = item;
             item.transform.position = itemHoldPosition.position;
             item.transform.SetParent(itemHoldPosition);

@@ -345,7 +345,6 @@ public class PlayerController : MonoBehaviour
             carryingItem.GetComponent<Collider2D>().enabled = false;
 
             uiManager.UpdateInventory(carryingItem); // Assume this method updates the UI accordingly
-            uiManager.HideHelpText();
         }
     }
 
@@ -400,12 +399,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject == itemToPickUp || other.gameObject == containerItem)
         {
-            uiManager.HideHelpText(); // Hide interaction UI hints
+            // uiManager.HideHelpText(); // Hide interaction UI hints
         }
 
         if (other.gameObject.CompareTag("Container") || other.gameObject.CompareTag("Interactable"))
         {
-            uiManager.HideHelpText();
+            // uiManager.HideHelpText();
             containerItem = null; // Clear the container reference if exiting container trigger
             itemToPickUp = null; // Clear the item reference if exiting item trigger
             isNearItem = false; // Reset the flag as there's no interactable item nearby

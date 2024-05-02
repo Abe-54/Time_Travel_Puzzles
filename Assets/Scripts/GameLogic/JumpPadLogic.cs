@@ -10,10 +10,12 @@ public class JumpPadLogic : MonoBehaviour
     public Sprite pressedSprite;
 
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         spriteRenderer.sprite = defaultSprite;
     }
 
@@ -34,6 +36,8 @@ public class JumpPadLogic : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+
+            audioSource.Play();
             Sequence sequence = DOTween.Sequence();
             sequence.AppendInterval(0.75f);
             sequence.AppendCallback(() =>
